@@ -1,0 +1,34 @@
+.download {
+  width: 280px;
+  //height: 207px;
+
+  @include flex-column-align-center;
+}
+
+.download__button {
+  color: $white;
+  width: 280px;
+  height: 55px;
+  border: 3px solid $white;
+  box-sizing: border-box;
+  border-radius: 29px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.download__list {
+  @include margin-padding-reset;
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download__description {
+  text-align: center;
+  font-weight: 300;
+
+  @include margin-padding-reset;
+}
