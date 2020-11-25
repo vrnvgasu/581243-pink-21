@@ -1,0 +1,20 @@
+.reviews__author {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: $black;
+
+  @include margin-padding-reset;
+}
+
+.reviews__text {
+  line-height: 30px;
+
+  @include margin-padding-reset;
+}
+
+.reviews__list {
+  @include margin-padding-reset;
+  @include list-reset;
+}

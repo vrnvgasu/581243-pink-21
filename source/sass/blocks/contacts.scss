@@ -1,0 +1,37 @@
+.contacts {
+  @include flex-column-align-center;
+}
+
+.contacts__text {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+
+  @include margin-padding-reset;
+}
+
+.contacts__list {
+  @include margin-padding-reset;
+  @include list-reset;
+  @include flex-column-align-center;
+}
+
+.contacts__item {
+  h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+
+    @include margin-padding-reset;
+  }
+
+  a,
+  address {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    color: $accent;
+  }
+}

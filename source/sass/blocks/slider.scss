@@ -1,0 +1,25 @@
+.slider {
+  @include flex-column-align-center;
+}
+
+.slider__toggles {
+  display: flex;
+  align-items: center;
+}
+
+.slider__toggle {
+  width: 0;
+  height: 0;
+  border: 3px solid $grey-dark;
+  border-radius: 50%;
+
+  @include margin-padding-reset;
+}
+
+.slider__toggle--current {
+  width: 6px;
+  height: 6px;
+  background-color: $white;
+  border: 3px solid $main;
+  box-sizing: content-box;
+}

@@ -1,0 +1,54 @@
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 24px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    border-radius: 1px;
+    background-color: $white;
+  }
+}
+
+.menu-toggle__hamburger {
+  height: 4px;
+  border-radius: 1px;
+  background-color: $white;
+}
+
+.menu-toggle--close {
+  width: 23px;
+  height: 23px;
+  display: block;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 0;
+    background-color: $white;
+    left: -5px;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    bottom: 50%;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    bottom: 50%;
+  }
+
+  .menu-toggle__hamburger {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+.price {
+  background-color: $background-grey;
+}
+
+.price__list {
+  @include margin-padding-reset;
+  @include list-reset;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.rate__list {
+  display: table;
+
+  @include margin-padding-reset;
+}
+
+.rate__item {
+  display: table-row;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.rate-header,
+.rate-price {
+  text-align: center;
+}

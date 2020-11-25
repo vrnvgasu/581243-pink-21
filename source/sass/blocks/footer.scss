@@ -1,0 +1,16 @@
+.footer {
+  @include flex-column-align-center;
+}
+
+.social__list {
+  @include list-reset;
+  @include margin-padding-reset;
+
+  display: flex;
+}
+
+.copyright__title {
+  @include margin-padding-reset;
+
+  line-height: 18px;
+}

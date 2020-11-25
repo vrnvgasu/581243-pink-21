@@ -1,0 +1,37 @@
+.advantages {
+  @include flex-column-align-center;
+}
+
+.advantages__title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+
+  @include margin-padding-reset;
+}
+
+.advantages__wrapper {
+  background-color: $background-grey;
+  width: 100%;
+}
+
+.advantages__list {
+  @include margin-padding-reset;
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__subtitle {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: $black;
+
+  @include margin-padding-reset;
+}
+
+.advantages__description {
+  @include margin-padding-reset;
+}

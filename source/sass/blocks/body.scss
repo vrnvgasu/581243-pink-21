@@ -1,0 +1,13 @@
+.body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $main;
+
+  @include margin-padding-reset;
+}
