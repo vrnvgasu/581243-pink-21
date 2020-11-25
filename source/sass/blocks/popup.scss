@@ -1,0 +1,30 @@
+.popup {
+  background-color: $white;
+  display: none;
+}
+
+.popup--active {
+  @include flex-column-align-center;
+}
+
+.popup__header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: $black;
+
+  @include margin-padding-reset;
+}
+
+.popup__text {
+  @include margin-padding-reset;
+}
+
+.popup-success__wrapper {
+  background-color: $background-grey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
