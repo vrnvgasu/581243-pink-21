@@ -1,0 +1,16 @@
+.button {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  width: 276px;
+  height: 59px;
+  text-transform: uppercase;
+
+  &--success {
+    color: $white;
+    background-color: $submit;
+    border: 2px solid $submit;
+    border-radius: 1px;
+    box-sizing: border-box;
+  }
+}

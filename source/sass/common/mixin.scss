@@ -7,13 +7,14 @@
   padding: 0;
 }
 
-@mixin margin-padding-reset {
-  margin: 0;
-  padding: 0;
-}
-
 @mixin flex-column-align-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@mixin flex-column-align-start {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }

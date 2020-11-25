@@ -1,0 +1,18 @@
+.contest {
+  @include flex-column-align-center;
+}
+
+.contest__lead {
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+
+  @include margin-padding-reset;
+}
+
+.contest__text {
+  line-height: 30px;
+  text-align: center;
+
+  @include margin-padding-reset;
+}

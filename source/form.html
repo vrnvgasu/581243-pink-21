@@ -4,40 +4,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="body">
-    <header class="header container">
-      <nav class="main-nav">
-        <a class="header__logo" href="index.html">
-          <img class="header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип PINK">
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="catalog.html">
-              Фотографии
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="">
-              Конкурс
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a href="https://htmlacademy.ru/intensive/adaptive">
-              HTML Academy
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header class="header">
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__work-panel">
+          <a class="page_header__logo" href="index.html">
+            <img class="header__logo-image" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип PINK">
+          </a>
+          <a class="main-nav__toggle" href="">
+            <span class="visually-hidden">Открыть меню</span>
+            <div class="menu-toggle">
+              <span class="menu-toggle__hamburger"></span>
+            </div>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="catalog.html">
+            Фотографии
+          </a>
+        </li>
+        <li class="main-nav__item visually-hidden">
+          <a href="">
+            Конкурс
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            HTML Academy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <main class="main">
       <h1 class="visually-hidden">Конкурс PINK</h1>
       <section class="contest">
@@ -46,18 +52,18 @@
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
         </p>
         <form class="contest__form form" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="form__fieldset container">
+          <fieldset class="form__fieldset form__fieldset--accent-label container">
             <div class="form__item">
               <label class="form__label" for="form-surname">Фамилия:</label>
               <input class="form__input form__input--text" id="form-surname" name="form-surname" type="text" placeholder="Укажите фамилию *" required>
             </div>
               <div class="form__item">
               <label class="form__label" for="form-name">Имя:</label>
-            <input class="form__input form__input--text" id="form-name" name="form-name" type="text" placeholder="Введите ваше имя *" required>
+              <input class="form__input form__input--text" id="form-name" name="form-name" type="text" placeholder="Введите ваше имя *" required>
             </div>
               <div class="form__item">
               <label class="form__label" for="form-patronymic">Отчество:</label>
-            <input class="form__input form__input--text" id="form-patronymic" name="form-patronymic" type="text" placeholder="Ну и отчество тоже">
+              <input class="form__input form__input--text" id="form-patronymic" name="form-patronymic" type="text" placeholder="Ну и отчество тоже">
             </div>
           </fieldset>
           <fieldset class="form__fieldset container">
@@ -99,7 +105,7 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="form__fieldset container">
+          <fieldset class="form__fieldset form__fieldset--accent-label container">
             <div class="form__item">
               <label class="form__label" for="form-tel">Номер телефона</label>
               <input class="form__input form__input--text" id="form-tel" name="form-tel" type="tel" placeholder="Номер, пожалуйста">
@@ -131,13 +137,14 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset container">
-            <label class="form__label" for="form-emotion">Опишите свои эмоции</label>
+            <legend class="form__legend">Опишите свои эмоции</legend>
+            <label class="form__label visually-hidden" for="form-emotion">Ваш текст</label>
             <textarea class="form__textarea" id="form-emotion" name="form-emotion" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <fieldset class="form__fieldset container">
-            <input class="form__input form__input--submit" type="submit" value="Отправить форму">
+            <input class="button button--success" type="submit" value="Отправить форму">
             <p class="form__text">
-              * — обязательные поля
+              <span class="required">*</span> — обязательные поля
             </p>
           </fieldset>
         </form>
@@ -177,19 +184,21 @@
         </p>
       </div>
     </footer>
-    <section class="popup form-success hidden">
+    <section class="popup popup-success hidden">
       <h2 class="popup__header">Ваша заявка отправлена</h2>
       <p class="popup__text">
         Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
       </p>
-      <button class="popup__button">Закрыть окно</button>
+      <div class="popup-success__wrapper">
+        <button class="popup__button button button--success">Закрыть окно</button>
+      </div>
     </section>
-    <section class="popup form-error hidden">
+    <section class="popup popup-error hidden">
       <h2 class="popup__header">Что-то пошло не так!</h2>
       <p class="popup__text">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="popup__button">OK</button>
+      <button class="popup__button button button--success">OK</button>
     </section>
   </body>
 </html>
