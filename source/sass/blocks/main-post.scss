@@ -1,0 +1,85 @@
+.post__list {
+  @include margin-padding-reset;
+  @include list-reset;
+  @include flex-column-align-center;
+
+  min-width: 280px;
+}
+
+.post__item {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.post__comment,
+.post__description,
+.post__likes {
+  @include margin-padding-reset;
+}
+
+.post__comment {
+  @include flex-column-align-center;
+
+  background-color: $background-grey;
+}
+
+.post__author {
+  font-weight: bold;
+  font-style: normal;
+
+  .post__time {
+    font-style: normal;
+  }
+}
+
+.post__likes {
+  color: $accent;
+  text-transform: uppercase;
+}
+
+.main-label {
+  @include flex-column-align-center;
+
+  justify-content: center;
+  width: 140px;
+  height: 36px;
+  background-color: $accent;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 24px;
+  color: $white;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.post__figure {
+  @include margin-padding-reset;
+  @include flex-column-align-center;
+
+  a {
+    position: relative;
+    margin-bottom: -7px;
+  }
+
+  figcaption {
+    width: 280px;
+  }
+}
+
+.post--main {
+  @include flex-column-align-center;
+
+  a,
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    width: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+.upload__form {
+  @include flex-column-align-center;
+
+  background-color: $background-grey;
+  padding-top: 20px;
+}
+
+.upload__filter {
+  @include margin-padding-reset;
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 161px;
+  width: 100%;
+  border-bottom: 1px solid $grey-darken;
+}
+
+.form__send {
+  @include flex-column-align-center;
+
+  justify-content: center;
+  height: 201px;
+}
+
+.form__input {
+  &--submit,
+  &--reset {
+    @include flex-column-align-center;
+
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    width: 280px;
+    height: 55px;
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 30px;
+    outline: none;
+  }
+
+  &--submit {
+    color: $accent;
+    border-color: $accent;
+  }
+
+  &--reset {
+    color: $grey-darken;
+    border-color: $grey-darken;
+  }
+}
