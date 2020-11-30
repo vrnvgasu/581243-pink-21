@@ -39,3 +39,15 @@
     color: $accent;
   }
 }
+
+.mail-link {
+  &:hover {
+    text-decoration-line: underline;
+    color: $main;
+  }
+
+  &:active {
+    text-decoration-line: none;
+    color: $grey-dark;
+  }
+}

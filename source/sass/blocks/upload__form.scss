@@ -40,6 +40,7 @@
     border-style: solid;
     border-radius: 30px;
     outline: none;
+    background-color: $background-grey;
   }
 
   &--submit {
@@ -47,8 +48,29 @@
     border-color: $accent;
   }
 
+  &--submit:hover {
+    color: $white;
+    background-color: $accent;
+  }
+
+  &--submit:active {
+    color: $grey-light;
+    background-color: $accent;
+  }
+
   &--reset {
     color: $grey-darken;
     border-color: $grey-darken;
+  }
+
+  &--reset:hover {
+    color: $grey-dark;
+    border-color: $grey-dark;
+  }
+
+  &--reset:active {
+    color: $grey-light;
+    background-color: $grey-dark;
+    border-width: 0;
   }
 }

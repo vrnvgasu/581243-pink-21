@@ -12,5 +12,16 @@
     border: 2px solid $submit;
     border-radius: 1px;
     box-sizing: border-box;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: $green;
+    }
+
+    &:active {
+      background-color: $green;
+      color: $grey-light;
+    }
   }
 }
