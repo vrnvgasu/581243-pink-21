@@ -1,5 +1,18 @@
 .footer {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  min-height: 284px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 127px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 197px;
+    flex-direction: row;
+  }
 }
 
 .social__list {
