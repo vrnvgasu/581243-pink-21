@@ -1,0 +1,13 @@
+.upload__lead {
+  @include flex-column-align-center;
+  justify-content: center;
+
+  min-height: 172px;
+}
+
+.upload__text {
+  @include margin-padding-reset;
+
+  line-height: 30px;
+  text-align: center;
+}

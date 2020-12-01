@@ -44,6 +44,17 @@
 .form__textarea {
   border: 2px solid $grey-lighter;
   border-radius: 1px;
+  outline: none;
+
+  &:hover {
+    border-color: $main;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $accent;
+    border-radius: 1px;
+  }
 }
 
 .form__textarea {
