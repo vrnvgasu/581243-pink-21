@@ -1,6 +1,16 @@
 .offer {
   background-color: $main;
   color: $white;
+  padding-top: 110px;
+  min-height: 733px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 729px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 853px;
+  }
 
   @include flex-column-align-center;
 }

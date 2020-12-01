@@ -3,25 +3,59 @@
   font-size: 18px;
   line-height: 32px;
   text-transform: uppercase;
+  margin-bottom: -66px;
+  background-color: $background-header;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: -110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 130px;
+  }
+}
+
+.main-nav--wait {
+  background-color: $background-header;
 }
 
 .main-nav__list {
   @include list-reset;
   @include margin-padding-reset;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 .main-nav__item {
-  height: 64px;
-  background-color: $main;
-  box-shadow: 0 1px 0 $black;
-
-  &:not(:first-child) {
-    box-shadow: inset 0 1px 0 $grey;
-  }
-  margin-bottom: 1px;
+  height: 63px;
 
   a {
     color: $white;
+  }
+
+  &:not(:first-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    background-color: $main;
+    box-shadow:
+      0 1px 0 $black,
+      inset 0 1px 0 $grey;
+    padding: 0 20px;
+    margin-bottom: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    background-color: transparent;
   }
 }
 
@@ -30,16 +64,17 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: $background-header;
+  @media (min-width: $tablet-width) {
+    height: 109px;
+  }
 }
 
 .main-nav__work-panel--active {
   background-color: $main;
 }
 
-.main-nav__item:not(.main-nav__work-panel) {
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main-nav__toggle {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
