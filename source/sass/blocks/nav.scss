@@ -12,6 +12,8 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 130px;
+    font-weight: normal;
+    line-height: 18px;
   }
 }
 
@@ -36,6 +38,16 @@
 
   a {
     color: $white;
+
+    @media (min-width: $desktop-width) {
+      &:hover {
+        color: $accent;
+      }
+
+      &:active {
+        color: $grey-light;
+      }
+    }
   }
 
   &:not(:first-child) {
@@ -44,7 +56,7 @@
     justify-content: center;
   }
 
-  @media (max-width: $desktop-width - 1) {
+  @media (max-width: $tablet-width-max) {
     background-color: $main;
     box-shadow:
       0 1px 0 $black,
