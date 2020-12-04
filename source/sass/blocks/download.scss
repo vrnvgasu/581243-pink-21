@@ -1,8 +1,12 @@
 .download {
   width: 280px;
-  //height: 207px;
+  height: 207px;
 
   @include flex-column-align-center;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+  }
 }
 
 .download__button {

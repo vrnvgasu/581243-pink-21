@@ -35,3 +35,7 @@
   border: 3px solid $main;
   box-sizing: content-box;
 }
+
+.slider__item:not(.slider__item--current) {
+  display: none;
+}

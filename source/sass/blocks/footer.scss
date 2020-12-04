@@ -1,5 +1,18 @@
 .footer {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  min-height: 284px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 127px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 197px;
+    flex-direction: row;
+  }
 }
 
 .social__list {
@@ -9,8 +22,27 @@
   display: flex;
 }
 
+.social__item {
+  width: 48px;
+  height: 48px;
+  border: 3px solid $grey-darken;
+  border-radius: 50%;
+
+  &:hover {
+    border-color: $main;
+  }
+
+  &:active {
+    border-color: $grey-darken;
+  }
+}
+
 .copyright__title {
   @include margin-padding-reset;
 
   line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }

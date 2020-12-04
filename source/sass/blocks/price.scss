@@ -10,19 +10,107 @@
   align-items: flex-end;
 }
 
-.rate__list {
+.price__table {
   display: table;
 
   @include margin-padding-reset;
 }
 
-.rate__item {
+.price--row {
   display: table-row;
+}
+
+.price__item--header {
+  background-color: $main;
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 276px;
+    border: 2px solid #283645;
+    border-radius: 1px 0 0 0;
+  }
+}
+
+.price__cell {
   line-height: 30px;
-  text-transform: uppercase;
+  background-color: $white;
+  border: 2px solid $grey-lighter;
+  border-radius: 1px 0 0 0;
+  height: 59px;
+  width: 276px;
+
+  @media (max-width: $mobile-width-only) {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    width: 233px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    font-size: 18px;
+    height: 45px;
+    width: 152px;
+  }
 }
 
 .rate-header,
 .rate-price {
-  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.rate-header {
+  @include flex-column-align-center;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.rate-price {
+  @include margin-padding-reset;
+
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.price__item--rates {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.price .price__item {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.price__toggles {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.rate-offer {
+  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
+.rate-status {
+  @include margin-padding-reset;
 }

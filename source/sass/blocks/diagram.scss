@@ -1,0 +1,52 @@
+.diagram {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $background-grey;
+  }
+}
+
+.diagram__wrapper {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 571px;
+  }
+}
+
+.diagram__content {
+  @include flex-column-align-start;
+
+  grid-column: 2 / -1;
+}
+
+.diagram__title {
+  @include margin-padding-reset;
+
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    width: 170px;
+  }
+}
+
+.diagram__text {
+  @include margin-padding-reset;
+}
+
+.diagram__link {
+  color: $accent;
+  text-decoration: underline;
+}

@@ -21,21 +21,29 @@
 }
 
 .post__comment {
-  @include flex-column-align-center;
+  @include flex-column-align-start;
 
   background-color: $background-grey;
 }
 
 .post__author {
-  font-weight: bold;
-  font-style: normal;
+  cite {
+    font-weight: bold;
+    font-style: normal;
+  }
 
   .post__time {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
     font-style: normal;
+    text-transform: uppercase;
   }
 }
 
 .post__likes {
+  font-size: 12px;
+  line-height: 24px;
   color: $accent;
   text-transform: uppercase;
 }

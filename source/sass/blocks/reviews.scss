@@ -6,10 +6,39 @@
   color: $black;
 
   @include margin-padding-reset;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.reviews__author-contacts {
+  @include margin-padding-reset;
+
+  display: none;
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .reviews__text {
   line-height: 30px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
 
   @include margin-padding-reset;
 }
@@ -17,4 +46,29 @@
 .reviews__list {
   @include margin-padding-reset;
   @include list-reset;
+}
+
+.reviews__item {
+  @include flex-column-align-center;
+
+  justify-content: center;
+  min-height: 270px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 505px;
+  }
+}
+
+.reviews__nav {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.reviews__toggles {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
