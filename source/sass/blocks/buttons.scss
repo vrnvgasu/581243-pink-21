@@ -24,4 +24,8 @@
       color: $grey-light;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    width: 296px;
+  }
 }
