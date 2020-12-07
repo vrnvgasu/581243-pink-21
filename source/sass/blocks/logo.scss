@@ -1,0 +1,45 @@
+.logo {
+  display: none;
+
+  &--header {
+    &:hover path {
+      fill: $accent;
+    }
+
+    &:active path {
+      fill: $grey-light;
+    }
+  }
+
+  &--footer {
+    &:hover path {
+      fill: $accent;
+    }
+
+    &:active path:first-child {
+      fill: $main;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
+  }
+
+  &--mobile {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

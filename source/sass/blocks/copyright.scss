@@ -1,0 +1,25 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.copyright__title {
+  @include margin-padding-reset;
+
+  line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.copyright__logo {
+  &:hover path {
+    fill: $main;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}

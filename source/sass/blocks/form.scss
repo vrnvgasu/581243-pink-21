@@ -1,23 +1,54 @@
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include container;
+  }
 }
 
 .form__fieldset {
-  border: none;
+  @include margin-padding-reset;
 
-  &:nth-child(2n):not(:last-child) {
-    background-color: $background-grey;
+  border: none;
+  width: 100%;
+
+  @media (max-width: $mobile-width-only) {
+    @include container;
+
+    &:nth-child(2n):not(:last-child) {
+      background-color: $background-grey;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $grey-lighter;
+    border-radius: 1px;
   }
 }
 
 .form__legend {
+  @include margin-padding-reset;
+
   line-height: 18px;
   color: $accent;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    line-height: 30px;
+  }
 }
 
 .form__item {
   @include flex-column-align-start;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
 }
 
 .form__label,
@@ -25,12 +56,14 @@
 .form__input::placeholder,
 .form__textarea,
 .form__textarea::placeholder {
+  @include margin-padding-reset;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 30px;
   color: $main;
   text-transform: none;
+  box-sizing: border-box;
 }
 
 .form__fieldset--accent-label .form__label {
@@ -45,6 +78,8 @@
   border: 2px solid $grey-lighter;
   border-radius: 1px;
   outline: none;
+  width: 100%;
+  height: 59px;
 
   &:hover {
     border-color: $main;
@@ -67,4 +102,103 @@
   line-height: 30px;
 
   @include margin-padding-reset;
+}
+
+.form__fieldset--author {
+  border: none;
+
+  @media (min-width: $desktop-width) {
+    width: 505px;
+  }
+
+  @media (min-width: $tablet-width) {
+    .form__item {
+      flex-direction: row;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.form__fieldset--achievements {
+  order: 2;
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+}
+
+.form__fieldset--contacts {
+  order: 3;
+}
+
+.form__fieldset--platform {
+  order: 4;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 431px;
+    box-sizing: border-box;
+  }
+}
+
+.form__fieldset--emotion {
+  order: 5;
+}
+
+.form__fieldset--submit {
+  order: 6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+}
+
+.form__fieldset--contacts-wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.form__fieldset--submit-wrapper {
+  @include flex-column-align-center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.label-contacts__head {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+}
+
+.label-contacts {
+  @include flex-column-align-start;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 55px;
+      height: 55px;
+      background-color: $grey-lighter;
+      top: 2px;
+      right: 2px;
+      box-sizing: border-box;
+      border: 2px solid $grey-lighter;
+      border-radius: 1px;
+      outline: none;
+    }
+  }
 }

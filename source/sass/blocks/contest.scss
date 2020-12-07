@@ -1,13 +1,49 @@
 .contest {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  padding-top: 110px;
+  min-height: 370px;
+  background-color: $main;
+
+  @media (min-width: $tablet-width) {
+    min-height: 630px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 580px;
+  }
 }
 
 .contest__lead {
+  font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   text-align: center;
+  color: $white;
+  margin: 0;
 
-  @include margin-padding-reset;
+  @media (min-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 68px;
+  }
+}
+
+.contest__wrapper {
+  @include flex-column-align-center;
+
+  justify-content: center;
+  background-color: $white;
+  width: 100%;
+  min-height: 133px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 190px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 186px;
+  }
 }
 
 .contest__text {
@@ -15,4 +51,8 @@
   text-align: center;
 
   @include margin-padding-reset;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
