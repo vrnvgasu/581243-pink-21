@@ -41,11 +41,15 @@
   a {
     color: $white;
 
-    @media (min-width: $desktop-width) {
-      &:hover {
-        color: $accent;
-      }
+    &:hover {
+      color: $accent;
+    }
 
+    &:active {
+      color: $accent-dark;
+    }
+
+    @media (min-width: $desktop-width) {
       &:active {
         color: $grey-light;
       }
