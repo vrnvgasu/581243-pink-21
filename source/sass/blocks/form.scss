@@ -202,3 +202,16 @@
     }
   }
 }
+
+.form__fieldset--achievements-wrapper {
+  @media (min-width: $desktop-width) {
+    padding-left: 58px;
+    padding-right: 58px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .form__item {
+      padding: 0;
+    }
+  }
+}
