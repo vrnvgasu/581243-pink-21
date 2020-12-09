@@ -16,7 +16,8 @@
       fill: $accent;
     }
 
-    &:active path:first-child {
+    &:active path:first-child,
+    &:active path:last-child {
       fill: $main;
     }
 

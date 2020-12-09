@@ -1,0 +1,13 @@
+.background--main-image {
+  background-image: url("../img/back-desktop.jpg");
+  background-position: center;
+  background-size: 729px auto;
+
+  @media (min-width: $tablet-width) {
+    background-size: 1200px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 2560px auto;
+  }
+}
