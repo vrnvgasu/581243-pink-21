@@ -4,6 +4,7 @@
 @import "common/mixin.scss";
 @import "common/global.scss";
 @import "blocks/slider.scss";
+@import "blocks/background.scss";
 @import "blocks/body.scss";
 @import "blocks/buttons.scss";
 @import "blocks/logo.scss";
@@ -26,4 +27,5 @@
 @import "blocks/catalog-lead.scss";
 @import "blocks/post.scss";
 @import "blocks/upload.scss";
-@import "blocks/upload__form.scss";
+@import "blocks/upload-form.scss";
+@import "blocks/scale.scss";

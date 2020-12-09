@@ -1,3 +1,9 @@
+.upload {
+  @media (min-width: $desktop-width) {
+    @include container;
+  }
+}
+
 .upload__lead {
   @include flex-column-align-center;
   justify-content: center;
@@ -10,4 +16,62 @@
 
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.upload__filter {
+  @include margin-padding-reset;
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 161px;
+  width: 100%;
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    @include container;
+
+    width: 280px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.upload__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-darken;
+    }
+  }
+}
+
+.upload__icon {
+  cursor: pointer;
+
+  @media (max-width: $mobile-width-only) {
+    path {
+      fill: $grey-dark;
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    transform: scale(0.5);
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $accent;
+  }
 }
