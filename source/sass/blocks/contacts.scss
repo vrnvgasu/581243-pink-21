@@ -2,7 +2,7 @@
   @include flex-column-align-center;
 
   justify-content: space-between;
-  min-height: 612px;
+  min-height: 618px;
 
   @media (min-width: $tablet-width) {
     min-height: 779px;
@@ -15,14 +15,19 @@
 
 .contacts__wrapper {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  min-height: 411px;
+  padding-top: 42px;
+  position: relative;
 }
 
 .contacts__text {
+  @include margin-padding-reset;
+
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-
-  @include margin-padding-reset;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -40,6 +45,9 @@
   @include list-reset;
   @include flex-column-align-center;
 
+  margin-top: 35px;
+  margin-bottom: auto;
+
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
@@ -50,6 +58,7 @@
 .contacts__item {
   min-width: 280px;
   text-align: center;
+  margin-bottom: 19px;
 
   &:last-child {
     flex-grow: 1;

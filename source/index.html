@@ -19,7 +19,7 @@
             </a>
             <a class="main-nav__toggle" href="">
               <span class="visually-hidden">Открыть меню</span>
-              <div class="menu-toggle">
+              <div class="menu-toggle menu-toggle--close">
                 <span class="menu-toggle__hamburger"></span>
               </div>
             </a>
@@ -49,10 +49,11 @@
     </header>
     <main class="main">
       <h1 class="visually-hidden">PINK</h1>
-      <section class="offer">
-        <h2 class="offer__lead">Наше предложение</h2>
-        <div class="offer__wrapper container">
+      <section class="offer background--main-image background--main-image--offer">
+        <h2 class="visually-hidden">Наше предложение</h2>
+        <div class="offer__wrapper">
           <h3 class="offer__lead">Взгляните на жизнь иначе!</h3>
+          <div class="offer__preview"></div>
           <div class="download">
             <a class="download__button" href="">
               Скачать приложение
@@ -60,22 +61,23 @@
             <ul class="download__list">
               <li class="download__item">
                 <a href="">
-                  <img class="download__item--logo-apple" src="https://via.placeholder.com/47x56" width="47" height="56" alt="App Store">
+                  <img class="download__item--logo-apple" src="img/icon-apple-logo.svg" width="47" height="56" alt="App Store">
                 </a>
               </li>
               <li class="download__item">
                 <a href="">
-                  <img class="download__item--logo-android" src="https://via.placeholder.com/43x47" width="43" height="47" alt="Google Play">
+                  <img class="download__item--logo-android" src="img/icon-android-logo.svg" width="43" height="47" alt="Google Play">
                 </a>
               </li>
               <li class="download__item">
                 <a href="">
-                  <img class="download__item--logo-microsoft" src="https://via.placeholder.com/44x41" width="44" height="41" alt="Microsoft Store">
+                  <img class="download__item--logo-microsoft" src="img/icon-microsoft-logo.svg" width="44" height="41" alt="Microsoft Store">
                 </a>
               </li>
             </ul>
             <p class="download__description">
-              Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+              Доступно для iPhone, iPad, Android,<br>
+              Windows Phone, OS X, Windows 8
             </p>
           </div>
         </div>
@@ -84,7 +86,7 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="advantages__lead container">
           <p class="advantages__title">Устали от серости мегаполиса?</p>
-          <p class="advantages__title">Нам есть, что вам предложить!</p>
+          <p class="advantages__title">Нам есть, что вам<br> предложить!</p>
         </div>
         <div class="advantages__wrapper">
           <div class="container">
@@ -101,7 +103,7 @@
                   Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
                 </p>
               </li>
-              <li class="advantages__item">
+              <li class="advantages__item advantages__item--screen-3">
                 <h3 class="advantages__subtitle">Заводит новых друзей</h3>
                 <p class="advantages__description">
                   Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
@@ -123,162 +125,179 @@
           </section>
         </div>
       </section>
-      <section class="reviews container">
+      <section class="reviews container slider">
         <h2 class="visually-hidden">Отзывы</h2>
-        <div class="slider">
-          <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item slider__item--current">
-              <cite class="reviews__author">Николай Петров</cite>
-              <p class="reviews__author-contacts">25 лет, водитель трамвая</p>
-              <p class="reviews__text">
-                <q>
-                  Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-                </q>
-              </p>
-            </li>
-          </ul>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
-            <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
-            <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
-          </p>
-          <p class="reviews__nav slider__nav">
-            <button class="slider__back" type="button" aria-label="Назад"></button>
-            <button class="slider__next" type="button" aria-label="Вперд"></button>
-          </p>
-        </div>
+        <ul class="reviews__list slider__list">
+          <li class="reviews__item slider__item slider__item--current">
+            <cite class="reviews__author">Николай Петров</cite>
+            <p class="reviews__author-contacts">25 лет, водитель трамвая</p>
+            <p class="reviews__text">
+              <q>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
+            </p>
+          </li>
+        </ul>
+        <p class="reviews__toggles slider__toggles">
+          <button class="slider__toggle slider__toggle--current" type="button" aria-label="Первый слайд"></button>
+          <button class="slider__toggle" type="button" aria-label="Второй слайд"></button>
+          <button class="slider__toggle" type="button" aria-label="Третий слайд"></button>
+        </p>
+        <p class="reviews__nav slider__nav">
+          <button class="slider__back" type="button" aria-label="Назад"></button>
+          <button class="slider__next" type="button" aria-label="Вперд"></button>
+        </p>
       </section>
       <section class="price">
         <h2 class="visually-hidden">Цены</h2>
-        <div class="slider container">
+        <div class="slider price__slider container">
           <ul class="price__list slider__list">
             <li class="price__item price__table price__item--rates">
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
                     Розовый фильтр
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
                     Смайлики
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
                     Комментарии
                 </div>
               </div>
             </li>
-            <li class="price__item price__table slider__item">
-              <div class="price--row">
+            <li class="price__item price__table slider__item price__item--prev">
+              <div class="price__row">
                 <div class="price__item--header rate-header">
+                  <svg class="price__hit" width="74" height="74" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M74 0L37 37 0 74V41L41 0h33z" fill="#D22856"/><text transform="rotate(-45 23.05 9.55)" fill="#fff" style="white-space:pre" font-family="Open Sans" font-size="14" font-weight="400" letter-spacing="0em"><tspan x="0" y="32.43">ХИТ</tspan></text></svg>
                   База
                   <span class="rate-price">1,99 usd</span>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Розовый фильтр
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Розовый фильтр
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Смайлики
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Не включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Смайлики
+                    </div>
+                    <div class="rate-status rate-status--no">
+                      <span class="visually-hidden">Не включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Комментарии
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Не включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Комментарии
+                    </div>
+                    <div class="rate-status rate-status--no">
+                      <span class="visually-hidden">Не включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </li>
             <li class="price__item price__table slider__item slider__item--current">
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__item--header rate-header">
+                  <svg class="price__hit price__hit--active" width="74" height="74" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M74 0L37 37 0 74V41L41 0h33z" fill="#D22856"/><text transform="rotate(-45 23.05 9.55)" fill="#fff" style="white-space:pre" font-family="Open Sans" font-size="14" font-weight="400" letter-spacing="0em"><tspan x="0" y="32.43">ХИТ</tspan></text></svg>
                   Стандарт
                   <span class="rate-price">3,99 usd</span>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Розовый фильтр
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Розовый фильтр
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Смайлики
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Смайлики
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Комментарии
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Не включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Комментарии
+                    </div>
+                    <div class="rate-status rate-status--no">
+                      <span class="visually-hidden">Не включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </li>
-            <li class="price__item price__table slider__item">
-              <div class="price--row">
+            <li class="price__item price__table slider__item price__item--next">
+              <div class="price__row">
                 <div class="price__item--header rate-header">
+                  <svg class="price__hit" width="74" height="74" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M74 0L37 37 0 74V41L41 0h33z" fill="#D22856"/><text transform="rotate(-45 23.05 9.55)" fill="#fff" style="white-space:pre" font-family="Open Sans" font-size="14" font-weight="400" letter-spacing="0em"><tspan x="0" y="32.43">ХИТ</tspan></text></svg>
                   Анлим
                   <span class="rate-price">9,99 usd</span>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Розовый фильтр
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Розовый фильтр
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Смайлики
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Смайлики
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="price--row">
+              <div class="price__row">
                 <div class="price__cell">
-                  <div class="rate-offer">
-                    Комментарии
-                  </div>
-                  <div class="rate-status">
-                    <span class="visually-hidden">Включен</span>
+                  <div class="price__wrapper">
+                    <div class="rate-offer">
+                      Комментарии
+                    </div>
+                    <div class="rate-status rate-status--yes">
+                      <span class="visually-hidden">Включен</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -316,7 +335,9 @@
           </ul>
         </div>
         <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680.615520180605!2d30.32172386807813!3d59.93878041327753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1605717192077!5m2!1sen!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <div class="map__wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1680.615520180605!2d30.32172386807813!3d59.93878041327753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1605717192077!5m2!1sen!2sru" width="320" height="200" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
         </div>
       </section>
     </main>

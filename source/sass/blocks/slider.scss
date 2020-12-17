@@ -1,8 +1,12 @@
 .slider {
   @include flex-column-align-center;
+
+  justify-content: space-between;
 }
 
 .slider__toggles {
+  @include margin-padding-reset;
+
   display: flex;
   align-items: center;
 }
@@ -15,6 +19,14 @@
   border: 3px solid $grey-dark;
   border-radius: 50%;
   outline: none;
+
+  &:not(:last-child) {
+    margin-right: 19px;
+
+    &.slider__toggle--current {
+      margin-right: 16px;
+    }
+  }
 
   &:hover,
   &:focus, {

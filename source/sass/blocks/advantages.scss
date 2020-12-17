@@ -5,8 +5,8 @@
 .advantages__lead {
   @include flex-column-align-center;
 
-  justify-content: space-around;
-  min-height: 250px;
+  justify-content: space-between;
+  min-height: 247px;
 
   @media (min-width: $tablet-width) {
     min-height: 291px;
@@ -25,18 +25,40 @@
 
   @include margin-padding-reset;
 
+  @media (max-width: $mobile-width-only) {
+    &:first-child {
+      margin-top: 40px;
+      margin-bottom: auto;
+    }
+
+    &:last-child {
+      margin-top: auto;
+      margin-bottom: 64px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 40px;
     line-height: 54px;
+
+    &:last-child {
+      margin-bottom: 95px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     font-size: 50px;
     line-height: 68px;
+
+    &:last-child {
+      margin-bottom: 66px;
+    }
   }
 }
 
 .advantages__wrapper {
+  @include triangle-background(32px, 54px, 100px);
+
   background-color: $background-grey;
   width: 100%;
 
@@ -51,7 +73,13 @@
   @include list-reset;
 
   display: flex;
+  position: relative;
   flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 19px;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     grid-column: 2 / -1;
@@ -60,6 +88,64 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;
+  }
+}
+
+.advantages__item {
+  @include flex-column-align-center;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 30px;
+    margin-bottom: auto;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    width: 300px;
+    height: 301px;
+    background-image: url("../img/iphone-3.png");
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  @media (max-width: $tablet-width-max) {
+    &:not(:last-child) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.advantages__item--screen-3 {
+  &::before {
+    display: block;
+    background:
+      url("../img/iphone-screen-3.jpg") 8px 35px no-repeat,
+      url("../img/iphone-3.png") no-repeat;
+    background-size: 90%, 100%;
+
+    @media (max-width: $mobile-width-only) {
+      width: 157px;
+      height: 277px;
+      order: 3;
+      margin-top: 41px;
+    }
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      width: 268px;
+      height: 481px;
+      left: 20px;
+      bottom: 0;
+    }
   }
 }
 
@@ -81,6 +167,11 @@
   @include margin-padding-reset;
 
   text-align: center;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 13px;
+    margin-bottom: auto;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     text-align: left;

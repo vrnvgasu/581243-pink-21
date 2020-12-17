@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: auto;
+    margin-bottom: 42px;
+  }
 }
 
 .copyright__title {
@@ -15,6 +20,8 @@
 }
 
 .copyright__logo {
+  margin-left: 16px;
+
   &:hover path {
     fill: $main;
   }

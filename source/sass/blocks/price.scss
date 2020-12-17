@@ -1,43 +1,93 @@
 .price {
+  @include triangle-background(19px, 41px, 100px);
+
   background-color: $background-grey;
+}
+
+.price__slider {
+  @include flex-column-align-center;
+
+  justify-content: space-between;
+  min-height: 462px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    min-height: 345px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 434px;
+  }
 }
 
 .price__list {
   @include margin-padding-reset;
   @include list-reset;
 
+  margin-top: 83px;
   display: flex;
   align-items: flex-end;
+  position: relative;
 }
 
 .price__table {
   display: table;
+  border-collapse: collapse;
+  min-width: 280px;
+  overflow: hidden;
 
   @include margin-padding-reset;
 }
 
-.price--row {
+.price__row {
   display: table-row;
+
+  height: 61px;
+
+  &:nth-child(2) {
+    height: 60px;
+  }
 }
 
 .price__item--header {
   background-color: $main;
   display: block;
+  box-sizing: border-box;
+  height: 98px;
+  position: relative;
 
   @media (max-width: $mobile-width-only) {
-    min-width: 276px;
-    border: 2px solid #283645;
+    border-right: 2px solid $white;
+    border-left: 2px solid $white;
     border-radius: 1px 0 0 0;
   }
 }
 
+.price__hit {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -2px;
+
+  &--active {
+    display: block;
+  }
+}
+
 .price__cell {
+  display: table-cell;
   line-height: 30px;
   background-color: $white;
+  box-sizing: border-box;
   border: 2px solid $grey-lighter;
+  border-left-width: 4px;
+  border-right-width: 4px;
   border-radius: 1px 0 0 0;
-  height: 59px;
-  width: 276px;
+  width: 270px;
+
+  &:first-child {
+    border-top-width: 0;
+  }
 
   @media (max-width: $mobile-width-only) {
     text-transform: uppercase;
@@ -64,9 +114,11 @@
 .rate-header {
   @include flex-column-align-center;
 
+  justify-content: space-between;
   font-weight: bold;
   font-size: 16px;
   line-height: 30px;
+  padding-top: 12px;
 
   @media (min-width: $desktop-width) {
     font-size: 18px;
@@ -79,6 +131,8 @@
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: auto;
+  margin-top: -3px;
 
   @media (min-width: $desktop-width) {
     font-size: 24px;
@@ -92,12 +146,34 @@
 }
 
 .price .price__item {
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+    &--prev,
+    &--next {
+      display: table;
+      position: absolute;
+      top: 0;
+    }
+
+    &--prev {
+      left: -278px;
+    }
+
+    &--next {
+      right: -278px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    display: block;
+    display: table;
   }
 }
 
 .price__toggles {
+  margin-bottom: 45px;
+  margin-top: auto;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -108,9 +184,31 @@
 
   @media (max-width: $mobile-width-only) {
     display: block;
+    margin-top: 14px;
+    margin-left: 20px;
   }
 }
 
+.price__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .rate-status {
-  @include margin-padding-reset;
+  &--yes {
+    width: 31px;
+    height: 21px;
+    margin-top: 14px;
+    margin-right: 18px;
+    background-image: url("../img/yes.svg");
+  }
+
+  &--no {
+    width: 27px;
+    height: 27px;
+    margin-top: 14px;
+    margin-right: 20px;
+    background-image: url("../img/no.svg");
+  }
 }
