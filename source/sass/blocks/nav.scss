@@ -86,10 +86,11 @@
   @media (min-width: $tablet-width) {
     height: 109px;
   }
-}
 
-.main-nav__work-panel--active {
-  background-color: $main;
+  &--active {
+    height: 66px;
+    background-color: transparent;
+  }
 }
 
 .main-nav__toggle {
