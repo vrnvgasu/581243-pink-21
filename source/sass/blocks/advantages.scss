@@ -9,7 +9,8 @@
   min-height: 247px;
 
   @media (min-width: $tablet-width) {
-    min-height: 291px;
+    min-height: 244px;
+    margin-top: 47px;
   }
 
   @media (min-width: $desktop-width) {
@@ -40,9 +41,10 @@
   @media (min-width: $tablet-width) {
     font-size: 40px;
     line-height: 54px;
+    margin-bottom: 0;
 
     &:last-child {
-      margin-bottom: 95px;
+      margin-bottom: auto;
     }
   }
 
@@ -61,8 +63,15 @@
 
   background-color: $background-grey;
   width: 100%;
+}
+
+.advantages__container {
+  @include container;
+
+  position: relative;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    max-width: 660px;
     display: grid;
     grid-template-columns: 1fr 310px;
   }
@@ -73,7 +82,6 @@
   @include list-reset;
 
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
 
@@ -83,6 +91,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     grid-column: 2 / -1;
+    margin-top: 22px;
+    margin-bottom: 9px;
   }
 
   @media (min-width: $desktop-width) {
@@ -97,6 +107,11 @@
   @media (max-width: $mobile-width-only) {
     margin-top: 30px;
     margin-bottom: auto;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    align-items: flex-start;
+    margin-bottom: 33px;
   }
 
   &::before {
@@ -139,17 +154,22 @@
       margin-top: 41px;
     }
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       position: absolute;
       width: 268px;
       height: 481px;
       left: 20px;
       bottom: 0;
+      background-position:
+        13px 59px,
+        0 0;
     }
   }
 }
 
 .advantages__subtitle {
+  @include margin-padding-reset;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
@@ -160,7 +180,10 @@
     text-align: left;
   }
 
-  @include margin-padding-reset;
+  @media (min-width: $desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .advantages__description {
@@ -175,5 +198,10 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
   }
 }

@@ -24,6 +24,11 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 351px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    max-width: 660px;
   }
 }
 
@@ -38,6 +43,18 @@
     height: 286px;
     margin-top: auto;
   }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    background-position:
+      -131px bottom,
+      351px 146px;
+    background-size: 889px, 195px;
+    margin-bottom: 0;
+  }
 }
 
 .offer__lead {
@@ -50,6 +67,12 @@
     padding: 0 20px;
 
     @include container;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+    margin-top: 81px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
 
   @include margin-padding-reset;

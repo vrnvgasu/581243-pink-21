@@ -1,6 +1,10 @@
 .reviews {
   min-height: 362px;
 
+  @media (min-width: $tablet-width) {
+    min-height: 388px;
+  }
+
   @media (min-width: $desktop-width) {
     min-height: 505px;
   }
@@ -17,6 +21,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
+    margin-top: 36px;
+    margin-bottom: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -62,8 +68,10 @@
   @include margin-padding-reset;
   @include list-reset;
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: 40px;
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 100px;
   }
 }
 
@@ -72,6 +80,10 @@
 
   justify-content: space-between;
   min-height: 255px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 170px;
+  }
 
   @media (min-width: $desktop-width) {
     min-height: 505px;
@@ -87,9 +99,12 @@
 }
 
 .reviews__toggles {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 0;
-    margin-bottom: auto;
+  margin-top: 0;
+  margin-bottom: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 55px;
+    padding-right: 3px;
   }
 
   @media (min-width: $desktop-width) {

@@ -90,6 +90,10 @@
   &--active {
     height: 66px;
     background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      height: 110px;
+    }
   }
 }
 

@@ -10,6 +10,11 @@
   @include margin-padding-reset;
 
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
+    margin-left: -15px;
+  }
 }
 
 .social__item {
@@ -45,6 +50,10 @@
 
   &--facebook {
     padding-top: 6px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 1px;
+    }
   }
 
   &--youtube {

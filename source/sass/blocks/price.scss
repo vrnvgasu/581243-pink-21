@@ -2,14 +2,6 @@
   @include triangle-background(19px, 41px, 100px);
 
   background-color: $background-grey;
-}
-
-.price__slider {
-  @include flex-column-align-center;
-
-  justify-content: space-between;
-  min-height: 462px;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     min-height: 345px;
@@ -17,6 +9,17 @@
 
   @media (min-width: $desktop-width) {
     min-height: 434px;
+  }
+}
+
+.price__slider {
+  @include flex-column-align-center;
+
+  justify-content: space-between;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width-only) {
+    min-height: 462px;
   }
 }
 
@@ -28,6 +31,10 @@
   display: flex;
   align-items: flex-end;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 57px;
+  }
 }
 
 .price__table {
@@ -35,6 +42,34 @@
   border-collapse: collapse;
   min-width: 280px;
   overflow: hidden;
+  border-radius: 2px;
+
+  &:first-child {
+    .price__item--header {
+      display: none;
+    }
+
+    .price__cell {
+      padding-top: 8px;
+      padding-left: 14px;
+    }
+
+    .price__cell:first-child {
+      border-top-width: 2px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 156px;
+
+    &:not(:first-child) {
+      margin-left: -2px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 239px;
+  }
 
   @include margin-padding-reset;
 }
@@ -46,6 +81,14 @@
 
   &:nth-child(2) {
     height: 60px;
+
+    @media (min-width: $tablet-width) {
+      height: 46px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 47px;
   }
 }
 
@@ -56,21 +99,12 @@
   height: 98px;
   position: relative;
 
-  @media (max-width: $mobile-width-only) {
-    border-right: 2px solid $white;
-    border-left: 2px solid $white;
-    border-radius: 1px 0 0 0;
-  }
-}
+  border-right: 2px solid $white;
+  border-left: 2px solid $white;
 
-.price__hit {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: -2px;
-
-  &--active {
-    display: block;
+  @media (min-width: $tablet-width) {
+    height: 79px;
+    overflow: hidden;
   }
 }
 
@@ -82,26 +116,26 @@
   border: 2px solid $grey-lighter;
   border-left-width: 4px;
   border-right-width: 4px;
-  border-radius: 1px 0 0 0;
+  //border-radius: 2px 0 0 0;
   width: 270px;
 
   &:first-child {
     border-top-width: 0;
+    //height: 30px;
   }
 
   @media (max-width: $mobile-width-only) {
     text-transform: uppercase;
   }
 
+  @media (min-width: $tablet-width) {
+    //height: 20px;
+    width: 152px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 18px;
     width: 233px;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
-    font-size: 18px;
-    height: 45px;
-    width: 152px;
   }
 }
 
@@ -170,6 +204,18 @@
   }
 }
 
+.price__item:nth-child(2) {
+  .price__item--header {
+    border-left-color: $main;
+  }
+}
+
+.price__item:last-child {
+  .price__item--header {
+    border-right-color: $main;
+  }
+}
+
 .price__toggles {
   margin-bottom: 45px;
   margin-top: auto;
@@ -193,6 +239,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
 }
 
 .rate-status {
@@ -202,6 +254,11 @@
     margin-top: 14px;
     margin-right: 18px;
     background-image: url("../img/yes.svg");
+
+    @media (min-width: $tablet-width) {
+      margin-top: 12px;
+      margin-right: 0;
+    }
   }
 
   &--no {
@@ -210,5 +267,39 @@
     margin-top: 14px;
     margin-right: 20px;
     background-image: url("../img/no.svg");
+
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+      margin-right: 0;
+    }
+  }
+}
+
+.price__hit {
+  display: none;
+  position: absolute;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  color: $white;
+  background-color: $accent;
+  transform: rotate(-45deg);
+  width: 114px;
+  height: 23px;
+  text-transform: uppercase;
+  text-align: center;
+  left: -33px;
+  padding-right: 14px;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 19px;
+    width: 104px;
+    line-height: 17px;
+    left: -34px;
+    padding-right: 10px;
   }
 }

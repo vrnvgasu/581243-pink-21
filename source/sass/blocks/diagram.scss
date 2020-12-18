@@ -12,6 +12,8 @@
 
 .diagram__wrapper {
   display: none;
+  min-height: 330px;
+  max-width: 660px;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -19,8 +21,20 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
+    max-width: 1200px;
     grid-template-columns: 1fr 571px;
+  }
+}
+
+.diagram__timer {
+  @include flex-column-align-center;
+
+  width: 100%;
+  height: 100%;
+
+  svg {
+    margin-right: auto;
+    margin-top: auto;
   }
 }
 
@@ -36,17 +50,36 @@
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
+  color: $black;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     width: 170px;
+    margin-top: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    line-height: 30px;
   }
 }
 
 .diagram__text {
   @include margin-padding-reset;
+
+  margin-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .diagram__link {
   color: $accent;
   text-decoration: underline;
+  margin-top: 10px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

@@ -7,11 +7,17 @@
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 
   @media (max-width: $mobile-width-only) {
     background-color: $background-blue-dark;
     width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 351px;
   }
 }
 
@@ -41,6 +47,12 @@
     color: $accent-dark;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
   @media (min-width: $desktop-width) {
     font-size: 21px;
   }
@@ -55,11 +67,20 @@
   align-items: flex-end;
 }
 
-.download__item:not(:last-child) {
-  margin-right: 35px;
+.download__item {
+  &:not(:last-child) {
+    margin-right: 35px;
 
-  &:first-child {
-    margin-bottom: -3px;
+    &:first-child {
+      margin-bottom: -3px;
+    }
+  }
+
+  &--logo {
+    &-microsoft {
+      padding-right: 4px;
+      padding-bottom: 3px;
+    }
   }
 }
 
@@ -73,5 +94,6 @@
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    margin-bottom: 115px;
   }
 }

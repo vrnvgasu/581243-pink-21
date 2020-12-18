@@ -17,6 +17,10 @@
 
 .footer__logo {
   @media (max-width: $mobile-width-only) {
-    margin-top: 33px;
+    margin-top: 49px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
   }
 }
