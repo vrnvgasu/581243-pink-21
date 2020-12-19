@@ -23,4 +23,10 @@
     background-size: 1280px auto;
     background-position: 50% 100%;
   }
+
+  @media (min-width: $desktop-width) {
+    background-size: 226%;
+    background-position: 50% 76%;
+    background-repeat: repeat;
+  }
 }

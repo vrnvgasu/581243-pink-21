@@ -41,6 +41,8 @@
   }
 
   &--desktop {
+    margin-top: -15px;
+
     @media (min-width: $desktop-width) {
       display: block;
     }

@@ -11,6 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    text-transform: none;
     padding: 0 130px;
     font-weight: normal;
     line-height: 18px;
@@ -85,6 +86,10 @@
 
   @media (min-width: $tablet-width) {
     height: 109px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 94px;
   }
 
   &--active {

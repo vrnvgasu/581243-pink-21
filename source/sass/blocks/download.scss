@@ -5,11 +5,6 @@
   width: 320px;
   height: 271px;
 
-  @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-
   @media (max-width: $mobile-width-only) {
     background-color: $background-blue-dark;
     width: 100%;
@@ -18,6 +13,12 @@
   @media (min-width: $tablet-width) {
     width: 300px;
     height: 351px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 403px;
   }
 }
 
@@ -55,6 +56,7 @@
 
   @media (min-width: $desktop-width) {
     font-size: 21px;
+    height: 56px;
   }
 }
 
@@ -65,6 +67,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 2px;
+  }
 }
 
 .download__item {
@@ -80,6 +86,11 @@
     &-microsoft {
       padding-right: 4px;
       padding-bottom: 3px;
+
+      @media (min-width: $desktop-width) {
+        padding-bottom: 0;
+        padding-left: 1px;
+      }
     }
   }
 }
@@ -95,5 +106,10 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     margin-bottom: 115px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    margin-bottom: 125px;
   }
 }

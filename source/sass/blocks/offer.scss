@@ -25,10 +25,12 @@
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 1fr 351px;
+    max-width: 660px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
-    max-width: 660px;
+  @media (min-width: $desktop-width) {
+    max-width: 1200px;
+    grid-template-rows: 1fr 403px;
   }
 }
 
@@ -44,7 +46,7 @@
     margin-top: auto;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+  @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
     grid-row: 1 / 3;
     width: 100%;
@@ -55,9 +57,18 @@
     background-size: 889px, 195px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    background-position:
+      15px bottom,
+      585px 183px;
+    background-size: 1050px, 230px;
+  }
 }
 
 .offer__lead {
+  @include margin-padding-reset;
+
   text-align: center;
   font-weight: 300;
   font-size: 24px;
@@ -69,19 +80,15 @@
     @include container;
   }
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
     margin-top: 81px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 
-  @include margin-padding-reset;
-
-  @media (min-width: $tablet-width) {
-    font-size: 40px;
-  }
-
   @media (min-width: $desktop-width) {
+    margin-top: 81px;
     font-size: 50px;
     line-height: 68px;
   }

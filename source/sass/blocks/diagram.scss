@@ -23,6 +23,7 @@
   @media (min-width: $desktop-width) {
     max-width: 1200px;
     grid-template-columns: 1fr 571px;
+    min-height: 480px;
   }
 }
 
@@ -35,6 +36,12 @@
   svg {
     margin-right: auto;
     margin-top: auto;
+
+    @media (min-width: $desktop-width) {
+      transform: scale(1.25);
+      margin-top: 102px;
+      margin-left: 31px;
+    }
   }
 }
 
@@ -59,6 +66,8 @@
 
   @media (min-width: $desktop-width) {
     line-height: 30px;
+    margin-top: 163px;
+    margin-left: 1px;
   }
 }
 
@@ -70,6 +79,7 @@
   @media (min-width: $desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    margin-top: 25px;
   }
 }
 
@@ -81,5 +91,6 @@
   @media (min-width: $desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    margin-top: 30px;
   }
 }

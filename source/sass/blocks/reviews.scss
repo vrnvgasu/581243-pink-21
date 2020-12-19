@@ -1,5 +1,6 @@
 .reviews {
   min-height: 362px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     min-height: 388px;
@@ -42,6 +43,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 2px;
     font-size: 18px;
   }
 }
@@ -62,6 +64,10 @@
     font-size: 18px;
     order: -1;
   }
+
+  @media (min-width: $desktop-width) {
+    max-width: 688px;
+  }
 }
 
 .reviews__list {
@@ -72,6 +78,11 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 49px;
+    margin-bottom: auto;
   }
 }
 
@@ -86,7 +97,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-height: 505px;
+    min-height: 105px;
   }
 }
 
@@ -110,4 +121,44 @@
   @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.reviews__quotes {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-top: 72px;
+  }
+}
+
+.reviews__back,
+.reviews__next {
+  position: absolute;
+  top: 212px;
+  background-color: $white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover path,
+  &:focus path {
+    fill: $main;
+    opacity: 0.6;
+  }
+
+  &:active path {
+    fill: $main;
+    opacity: 0.1;
+  }
+}
+
+.reviews__back {
+  left: 124px;
+}
+
+.reviews__next {
+  right: 124px;
+  top: 209px;
+  transform: rotate(180deg);
 }
