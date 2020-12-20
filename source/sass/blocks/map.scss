@@ -1,5 +1,38 @@
 .map {
   width: 100%;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-bottom: 33px solid transparent;
+    z-index: 10;
+
+    @media (min-width: $tablet-width) {
+      border-bottom-width: 68px;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-bottom-width: 103px;
+    }
+  }
+
+  &::before {
+    left: 0;
+    border-right: 50vw solid $white;
+  }
+
+  &::after {
+    right: 0;
+    border-left: 50vw solid $white;
+  }
+}
+
+.map__wrapper {
+  width: 100%;
+  margin: 0 auto;
 
   @media (min-width: $desktop-width) {
     max-width: 1200px;

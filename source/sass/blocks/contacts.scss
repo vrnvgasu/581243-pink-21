@@ -2,7 +2,7 @@
   @include flex-column-align-center;
 
   justify-content: space-between;
-  min-height: 612px;
+  min-height: 618px;
 
   @media (min-width: $tablet-width) {
     min-height: 779px;
@@ -15,14 +15,23 @@
 
 .contacts__wrapper {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  min-height: 411px;
+  padding-top: 42px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+  }
 }
 
 .contacts__text {
+  @include margin-padding-reset;
+
   font-weight: 300;
   font-size: 24px;
   line-height: 120%;
-
-  @include margin-padding-reset;
 
   @media (min-width: $tablet-width) {
     font-size: 40px;
@@ -33,6 +42,12 @@
     font-size: 50px;
     line-height: 68px;
   }
+
+  &:first-child {
+    @media (min-width: $desktop-width) {
+      margin-top: 15px;
+    }
+  }
 }
 
 .contacts__list {
@@ -40,32 +55,73 @@
   @include list-reset;
   @include flex-column-align-center;
 
+  margin-top: 35px;
+  margin-bottom: auto;
+
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+    margin-top: 40px;
   }
 }
 
 .contacts__item {
   min-width: 280px;
   text-align: center;
-
-  &:last-child {
-    flex-grow: 1;
-  }
+  margin-bottom: 19px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    min-width: 310px;
+    min-width: 300px;
+  }
+
+  &--address {
+    flex-grow: 1;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      width: 100%;
+      margin-top: 23px;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+    }
+  }
+
+  &--email {
+    @media (min-width: $desktop-width) {
+      order: 3;
+      padding-left: 38px;
+    }
+  }
+
+  &--tel {
+    @media (min-width: $desktop-width) {
+      padding-right: 40px;
+    }
   }
 
   h3 {
+    @include margin-padding-reset;
+
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
 
-    @include margin-padding-reset;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 20px;
+    }
   }
 
   a,
@@ -87,5 +143,13 @@
   &:active {
     text-decoration-line: none;
     color: $grey-dark;
+  }
+}
+
+.contacts__map {
+  margin-top: -6px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -45px;
   }
 }

@@ -11,6 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    text-transform: none;
     padding: 0 130px;
     font-weight: normal;
     line-height: 18px;
@@ -81,14 +82,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 69px;
 
   @media (min-width: $tablet-width) {
     height: 109px;
   }
-}
 
-.main-nav__work-panel--active {
-  background-color: $main;
+  @media (min-width: $desktop-width) {
+    margin-right: 94px;
+  }
+
+  &--active {
+    height: 66px;
+    background-color: transparent;
+
+    @media (min-width: $tablet-width) {
+      height: 110px;
+    }
+  }
 }
 
 .main-nav__toggle {

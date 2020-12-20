@@ -33,12 +33,16 @@
   }
 
   &--tablet {
+    margin-top: -15px;
+
     @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       display: block;
     }
   }
 
   &--desktop {
+    margin-top: -15px;
+
     @media (min-width: $desktop-width) {
       display: block;
     }

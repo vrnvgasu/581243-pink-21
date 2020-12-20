@@ -15,31 +15,16 @@
   }
 }
 
-.social__list {
-  @include list-reset;
-  @include margin-padding-reset;
-
-  display: flex;
-}
-
-.social__item {
-  @include flex-column-align-center;
-
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 3px solid $grey-darken;
-  border-radius: 50%;
-
-  &:hover {
-    border-color: $main;
+.footer__logo {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 49px;
   }
 
-  &:active {
-    border-color: $grey-darken;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 15px;
+  }
 
-    svg {
-      opacity: 0.3;
-    }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 18px;
   }
 }

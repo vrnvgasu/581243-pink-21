@@ -1,11 +1,24 @@
 .download {
-  width: 280px;
-  height: 207px;
-
   @include flex-column-align-center;
 
+  justify-content: space-between;
+  width: 320px;
+  height: 271px;
+
+  @media (max-width: $mobile-width-only) {
+    background-color: $background-blue-dark;
+    width: 100%;
+  }
+
   @media (min-width: $tablet-width) {
+    width: 300px;
+    height: 351px;
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 403px;
   }
 }
 
@@ -22,6 +35,8 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  margin-top: 28px;
+  margin-bottom: 32px;
 
   &:hover {
     background-color: $white;
@@ -32,19 +47,69 @@
     background-color: $white;
     color: $accent-dark;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -1px;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    height: 56px;
+  }
 }
 
 .download__list {
   @include margin-padding-reset;
   @include list-reset;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 2px;
+  }
+}
+
+.download__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+
+    &:first-child {
+      margin-bottom: -3px;
+    }
+  }
+
+  &--logo {
+    &-microsoft {
+      padding-right: 4px;
+      padding-bottom: 3px;
+
+      @media (min-width: $desktop-width) {
+        padding-bottom: 0;
+        padding-left: 1px;
+      }
+    }
+  }
 }
 
 .download__description {
+  @include margin-padding-reset;
+
   text-align: center;
   font-weight: 300;
+  margin-top: 16px;
+  margin-bottom: 32px;
 
-  @include margin-padding-reset;
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    margin-bottom: 115px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    margin-bottom: 125px;
+  }
 }

@@ -22,3 +22,21 @@ a {
 .required {
   color: $accent;
 }
+
+.visual {
+  &--hidden {
+    display: none;
+  }
+
+  &--tablet {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

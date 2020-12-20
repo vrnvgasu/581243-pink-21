@@ -32,3 +32,30 @@
     max-width: 1200px;
   }
 }
+
+@mixin triangle-background($height-mobile, $height-table, $height-desktop) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -$height-mobile;
+    right: 0;
+    border-bottom: $height-mobile/2 solid $background-grey;
+    border-top: $height-mobile/2 solid transparent;
+    border-right: 50vw solid $background-grey;
+    border-left: 50vw solid transparent;
+
+    @media (min-width: $tablet-width) {
+      top: -$height-table;
+      border-bottom-width: $height-table/2;
+      border-top-width: $height-table/2;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -$height-desktop;
+      border-bottom-width: $height-desktop/2;
+      border-top-width: $height-desktop/2;
+    }
+  }
+}
