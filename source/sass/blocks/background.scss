@@ -30,3 +30,10 @@
     background-repeat: repeat;
   }
 }
+
+.background--main-image--contest {
+  @media (max-width: $mobile-width-only) {
+    background-position: 50% 35%;
+    background-size: 830px auto;
+  }
+}

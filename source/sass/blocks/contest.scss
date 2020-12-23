@@ -2,9 +2,10 @@
   @include flex-column-align-center;
 
   justify-content: space-between;
-  padding-top: 110px;
+  padding-top: 93px;
   min-height: 370px;
   background-color: $main;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     min-height: 630px;
@@ -32,10 +33,9 @@
 .contest__wrapper {
   @include flex-column-align-center;
 
-  justify-content: center;
   background-color: $white;
   width: 100%;
-  min-height: 133px;
+  min-height: 134px;
 
   @media (min-width: $tablet-width) {
     min-height: 190px;
@@ -47,10 +47,11 @@
 }
 
 .contest__text {
+  @include margin-padding-reset;
+
   line-height: 30px;
   text-align: center;
-
-  @include margin-padding-reset;
+  margin-top: 44px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
