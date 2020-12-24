@@ -110,6 +110,10 @@
   @media (min-width: $tablet-width) {
     height: 193px;
   }
+
+  @media (min-width: $desktop-width) {
+    height: 128px;
+  }
 }
 
 .form__text {
@@ -215,6 +219,27 @@
     @media (min-width: $desktop-width) {
       margin-top: 36px;
       margin-bottom: 7px;
+      padding: 0;
+
+      &--bitch {
+        order: 4;
+      }
+
+      &--chack {
+        order: 2;
+      }
+
+      &--souvenir {
+        order: 5;
+      }
+
+      &--tower {
+        order: 3;
+      }
+
+      &--hotel {
+        order: 6;
+      }
     }
   }
 }
@@ -299,9 +324,7 @@
     width: 435px;
     box-sizing: border-box;
     margin-top: 5px;
-    padding-left: 14px;
     padding-bottom: 52px;
-    //padding-top: 37px;
   }
 
   .form__legend {
@@ -323,6 +346,10 @@
         margin-top: 35px;
       }
     }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 14px;
+    }
   }
 }
 
@@ -335,6 +362,12 @@
     margin-top: 52px;
     padding-top: 31px;
     padding-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 51px;
+    padding-top: 28px;
+    padding-bottom: 43px;
   }
 
   .form__legend {
@@ -351,9 +384,6 @@
 
 .form__fieldset--submit {
   order: 6;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   border: none;
   margin-top: 48px;
   margin-bottom: 22px;
@@ -361,6 +391,11 @@
   @media (min-width: $tablet-width) {
     margin-top: 66px;
     margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 65px;
+    margin-bottom: 8px;
   }
 }
 
@@ -423,13 +458,8 @@
 .form__fieldset--achievements-wrapper {
   @media (min-width: $desktop-width) {
     padding-left: 58px;
-    padding-right: 58px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    .form__item {
-      padding: 0;
-    }
+    grid-template-columns: 315px 295px 268px;
   }
 }
 
