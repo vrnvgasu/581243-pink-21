@@ -36,4 +36,9 @@
     background-position: 50% 35%;
     background-size: 830px auto;
   }
+
+  @media (min-width: $tablet-width) {
+    background-size: 1280px auto;
+    background-position: 50% 56%;
+  }
 }
