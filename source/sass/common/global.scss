@@ -28,6 +28,12 @@ a {
     display: none;
   }
 
+  &--mobile {
+    @media (max-width: $mobile-width-only) {
+      display: block;
+    }
+  }
+
   &--tablet {
     @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       display: block;

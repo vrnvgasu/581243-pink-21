@@ -1,30 +1,111 @@
 .popup {
   background-color: $white;
   display: none;
+  width: 320px;
+  box-shadow: 0 7px 15px $popup-shadow;
+  border-radius: 1px;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+  }
+
+  &-success {
+    min-height: 380px;
+
+    @media (min-width: $tablet-width) {
+      min-height: 432px;
+      border-radius: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 377px;
+    }
+  }
+
+  &-error {
+    min-height: 289px;
+
+    @media (min-width: $tablet-width) {
+      min-height: 363px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 377px;
+    }
+  }
 }
 
 .popup--active {
   @include flex-column-align-center;
+
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: calc(50% - 160px);
+
+  @media (min-width: $tablet-width) {
+    left: calc(50% - 230px);
+  }
+
+  @media (min-width: $desktop-width) {
+    left: calc(50% - 390px);
+  }
 }
 
 .popup__header {
+  @include margin-padding-reset;
+  @include container;
+
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: $black;
+  margin-top: 38px;
 
-  @include margin-padding-reset;
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .popup__text {
   @include margin-padding-reset;
+
+  max-width: 280px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 350px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 380px;
+  }
 }
 
-.popup-success__wrapper {
+.popup__wrapper {
   background-color: $background-grey;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 163px;
+  box-sizing: border-box;
+
+  &--error {
+    @media (max-width: $tablet-width-max) {
+      align-items: flex-start;
+      height: 113px;
+      background-color: $white;
+    }
+  }
 }
