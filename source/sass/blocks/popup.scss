@@ -48,6 +48,18 @@
       top: calc(50% - 377px / 2);
     }
   }
+
+  .popup__button {
+    @media (min-width: $tablet-width) {
+      width: 296px;
+    }
+
+    &--success {
+      @media (min-width: $desktop-width) {
+        width: 456px;
+      }
+    }
+  }
 }
 
 .popup--active {
@@ -113,6 +125,10 @@
     @media (max-width: $tablet-width-max) {
       align-items: flex-start;
       background-color: $white;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 163px;
     }
   }
 }
