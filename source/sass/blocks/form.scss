@@ -132,12 +132,21 @@
     margin-top: 57px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
+    width: 435px;
+  }
+
   .form__item {
     &:not(:first-child) {
       margin-top: 17px;
 
       @media (min-width: $tablet-width) {
         margin-top: 47px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 48px;
       }
     }
   }
@@ -166,10 +175,6 @@
       padding-right: 0;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    width: 505px;
-  }
 }
 
 .form__fieldset--achievements {
@@ -181,6 +186,12 @@
   @media (min-width: $tablet-width) {
     margin-top: 28px;
     padding-bottom: 48px;
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 27px;
+    padding-top: 2px;
   }
 
   .form__legend {
@@ -195,13 +206,16 @@
   }
 
   .form__item {
-    &:not(:first-child) {
-      margin-top: 43px;
+    @media (max-width: $tablet-width-max) {
+      &:not(:first-child) {
+        margin-top: 43px;
+      }
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    order: 4;
+    @media (min-width: $desktop-width) {
+      margin-top: 36px;
+      margin-bottom: 7px;
+    }
   }
 }
 
@@ -214,6 +228,12 @@
     margin-top: 52px;
     padding-top: 25px;
     padding-bottom: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 27px;
+    padding-top: 23px;
+    padding-bottom: 13px;
   }
 
   .form__legend {
@@ -240,11 +260,24 @@
     }
   }
 
-  .form__item:last-child {
-    margin-top: 17px;
+  .form__item {
+    &:first-child {
+      @media (min-width: $desktop-width) {
+        padding-right: 35px;
+      }
+    }
 
-    @media (min-width: $tablet-width) {
-      margin-top: 24px;
+    &:last-child {
+      margin-top: 17px;
+
+      @media (min-width: $tablet-width) {
+        margin-top: 24px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-top: 0;
+        padding-left: 35px;
+      }
     }
   }
 }
@@ -263,8 +296,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 431px;
+    width: 435px;
     box-sizing: border-box;
+    margin-top: 5px;
+    padding-left: 14px;
+    padding-bottom: 52px;
+    //padding-top: 37px;
   }
 
   .form__legend {
@@ -281,6 +318,10 @@
   .form__item {
     &:not(:first-of-type) {
       margin-top: 34px;
+
+      @media (min-width: $desktop-width) {
+        margin-top: 35px;
+      }
     }
   }
 }

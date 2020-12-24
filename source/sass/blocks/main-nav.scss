@@ -39,6 +39,22 @@
 .main-nav__item {
   height: 63px;
 
+  &--active {
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+        left: 0;
+        bottom: 10px;
+      }
+    }
+  }
+
   a {
     color: $white;
 

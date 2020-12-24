@@ -29,6 +29,10 @@
     line-height: 68px;
     margin-top: 83px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 76px;
+  }
 }
 
 .contest__wrapper {
@@ -58,5 +62,9 @@
     font-size: 18px;
     margin: 91px auto 0 auto;
     max-width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 760px;
   }
 }
