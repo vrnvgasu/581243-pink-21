@@ -2,9 +2,10 @@
   @include flex-column-align-center;
 
   justify-content: space-between;
-  padding-top: 110px;
+  padding-top: 93px;
   min-height: 370px;
   background-color: $main;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     min-height: 630px;
@@ -26,19 +27,23 @@
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 68px;
+    margin-top: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 76px;
   }
 }
 
 .contest__wrapper {
   @include flex-column-align-center;
 
-  justify-content: center;
   background-color: $white;
   width: 100%;
-  min-height: 133px;
+  min-height: 134px;
 
   @media (min-width: $tablet-width) {
-    min-height: 190px;
+    min-height: 191px;
   }
 
   @media (min-width: $desktop-width) {
@@ -47,12 +52,19 @@
 }
 
 .contest__text {
+  @include margin-padding-reset;
+
   line-height: 30px;
   text-align: center;
-
-  @include margin-padding-reset;
+  margin-top: 44px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    margin: 91px auto 0 auto;
+    max-width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 760px;
   }
 }
