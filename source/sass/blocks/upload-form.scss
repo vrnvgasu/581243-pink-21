@@ -34,8 +34,11 @@
 .upload-form__send {
   @include flex-column-align-center;
 
-  justify-content: center;
+  justify-content: space-between;
   height: 201px;
+  padding-top: 38px;
+  padding-bottom: 41px;
+  box-sizing: border-box;
 
   @media (min-width: $desktop-width) {
     flex-direction: row;

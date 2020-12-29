@@ -13,18 +13,6 @@
     border-radius: 1px;
     background-color: $white;
   }
-
-  &:hover::before,
-  &:hover::after,
-  &:hover .menu-toggle__hamburger {
-    background-color: $accent;
-  }
-
-  &:active::before,
-  &:active::after,
-  &:active .menu-toggle__hamburger {
-    background-color: $accent-dark;
-  }
 }
 
 .menu-toggle__hamburger {
@@ -49,16 +37,6 @@
     background-color: $white;
     left: -4px;
     top: 10px;
-  }
-
-  &:hover::before,
-  &:hover::after {
-    background-color: $accent;
-  }
-
-  &:active::before,
-  &:active::after {
-    background-color: $accent-dark;
   }
 
   &::before {

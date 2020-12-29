@@ -1,4 +1,6 @@
 .upload {
+  margin-bottom: 6px;
+
   @media (min-width: $desktop-width) {
     @include container;
   }
@@ -8,7 +10,7 @@
   @include flex-column-align-center;
   justify-content: center;
 
-  min-height: 172px;
+  min-height: 175px;
 }
 
 .upload__text {
@@ -37,6 +39,8 @@
     @include container;
 
     width: 280px;
+    //margin-top: -17px;
+    padding-bottom: 33px;
   }
 
   @media (min-width: $tablet-width) {
@@ -48,12 +52,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  outline: none;
+  //width: 100%;
+  //margin-top: 42px;
+
+  @media (max-width: $mobile-width-only) {
+    &:first-child {
+      margin-left: 17px;
+    }
+
+    &:last-child {
+      margin-right: 29px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     &:not(:last-child) {
       border-bottom: 1px solid $grey-darken;
     }
+  }
+
+  &:hover path,
+  &:focus path {
+    fill: $main;
+    opacity: 0.5;
   }
 }
 
@@ -68,10 +90,5 @@
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     transform: scale(0.5);
-  }
-
-  &:hover path,
-  &:focus path {
-    fill: $accent;
   }
 }

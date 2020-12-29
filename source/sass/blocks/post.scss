@@ -40,7 +40,7 @@
   @include flex-column-align-start;
 
   background-color: $background-grey;
-  padding: 25px 17px;
+  padding: 18px 10px 18px 17px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -51,6 +51,10 @@
   @media (min-width: $desktop-width) {
     padding: 31px 31px 29px 27px;
   }
+}
+
+.post__preview {
+  margin-bottom: -7px;
 }
 
 .post__author {
@@ -77,9 +81,14 @@
   color: $accent;
   text-transform: uppercase;
   width: 100%;
+  margin-top: 11px;
 
   @media (min-width: $tablet-width) {
     justify-content: space-between;
+  }
+
+  &--set {
+    margin-left: 19px;
   }
 
   a {
@@ -103,6 +112,7 @@
   position: absolute;
   top: 0;
   right: 20px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     top: 57px;
@@ -120,7 +130,7 @@
 
   a {
     position: relative;
-    margin-bottom: -7px;
+    //margin-bottom: -7px;  // для мобильной исключить
   }
 
   img {
@@ -151,6 +161,8 @@
 }
 
 .post--main {
+  margin-bottom: 10px;
+
   .post__comment {
     @media (min-width: $tablet-width) {
       flex-direction: row;
@@ -194,4 +206,8 @@
   figcaption {
     width: 100%;
   }
+}
+
+.post__description {
+  margin-top: 0;
 }

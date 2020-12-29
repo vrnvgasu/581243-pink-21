@@ -9,7 +9,7 @@
     &--active {
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: 34px;
       left: 20px;
     }
   }
@@ -20,5 +20,22 @@
 
   @media (min-width: $desktop-width) {
     width: 288px;
+  }
+}
+
+.scale__toggle {
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  background-color: $white;
+  border: 2px solid $accent;
+  border-radius: 50%;
+  top: -5px;
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    background-color: $accent;
   }
 }
