@@ -16,6 +16,7 @@
 
   @media (min-width: $tablet-width) {
     width: 202px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
@@ -37,5 +38,25 @@
 
   &:focus {
     background-color: $accent;
+  }
+
+  &--crop {
+    left: 80%;
+
+    @media (min-width: $tablet-width) {
+      left: 73%;
+    }
+  }
+
+  &--fill {
+    @media (min-width: $tablet-width) {
+      left: 13%;
+    }
+  }
+
+  &--contrast {
+    @media (min-width: $tablet-width) {
+      left: 48%;
+    }
   }
 }

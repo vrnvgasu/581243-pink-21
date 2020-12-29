@@ -6,7 +6,7 @@
   min-height: 420px;
 
   @media (min-width: $tablet-width) {
-    min-height: 668px;
+    min-height: 667px;
   }
 
   @media (min-width: $desktop-width) {
@@ -28,6 +28,7 @@
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 68px;
+    margin-top: 175px;
   }
 }
 
@@ -57,5 +58,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    padding-bottom: 0;
+    padding-top: 13px;
   }
 }
