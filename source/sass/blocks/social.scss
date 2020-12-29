@@ -23,14 +23,6 @@
 }
 
 .social__item {
-  @include flex-column-align-center;
-
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 3px solid $grey-darken;
-  border-radius: 50%;
-
   &:not(:last-child) {
     margin-right: 8px;
 
@@ -38,6 +30,17 @@
       margin-right: 5px;
     }
   }
+}
+
+.social__link {
+  @include flex-column-align-center;
+
+  box-sizing: border-box;
+  width: 54px;
+  height: 54px;
+  border: 3px solid $grey-darken;
+  border-radius: 50%;
+  justify-content: center;
 
   &:hover {
     border-color: $main;
@@ -50,23 +53,8 @@
       opacity: 0.3;
     }
   }
-}
-
-.social__link {
-  &--twitter {
-    padding-top: 4px;
-  }
-
-  &--facebook {
-    padding-top: 6px;
-
-    @media (min-width: $tablet-width) {
-      padding-left: 1px;
-    }
-  }
 
   &--youtube {
-    padding-top: 4px;
     padding-left: 5px;
   }
 }
