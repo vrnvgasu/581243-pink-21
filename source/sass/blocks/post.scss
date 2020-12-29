@@ -17,6 +17,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 300px 300px 300px;
+    row-gap: 54px;
   }
 }
 
@@ -51,7 +52,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 31px 31px 29px 27px;
+    padding: 24px 31px 22px 27px;
   }
 }
 
@@ -179,6 +180,11 @@
       flex-direction: row;
       flex-wrap: wrap;
       min-height: 121px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-height: 96px;
+      padding: 24px 31px 24px 27px;
     }
   }
 

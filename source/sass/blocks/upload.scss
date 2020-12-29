@@ -16,6 +16,10 @@
     min-height: 194px;
     padding-bottom: 7px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 185px;
+  }
 }
 
 .upload__text {
@@ -87,6 +91,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 410px;
+    padding-right: 30px;
+
     &:last-child {
       border-bottom: none;
     }
@@ -115,21 +122,29 @@
   }
 
   &--crop {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       margin-left: -7px;
     }
   }
 
   &--fill {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       margin-left: -9px;
       margin-top: 2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 2px;
     }
   }
 
   &--contrast {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       margin-left: -1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 6px;
     }
   }
 }

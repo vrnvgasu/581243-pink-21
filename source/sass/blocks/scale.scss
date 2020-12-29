@@ -46,17 +46,29 @@
     @media (min-width: $tablet-width) {
       left: 73%;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 24%;
+    }
   }
 
   &--fill {
     @media (min-width: $tablet-width) {
       left: 13%;
     }
+
+    @media (min-width: $desktop-width) {
+      left: 86%;
+    }
   }
 
   &--contrast {
     @media (min-width: $tablet-width) {
       left: 48%;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 56%;
     }
   }
 }

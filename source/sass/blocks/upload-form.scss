@@ -21,6 +21,8 @@
     padding-right: 60px;
     grid-template-columns: 300px 410px;
     column-gap: 90px;
+    padding-bottom: 55px;
+    margin-bottom: 36px;
   }
 }
 
@@ -50,6 +52,8 @@
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 0;
   }
 
   .upload-form__send--button {
