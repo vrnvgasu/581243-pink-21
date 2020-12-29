@@ -41,8 +41,10 @@
   border: 3px solid $grey-darken;
   border-radius: 50%;
   justify-content: center;
+  outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $main;
   }
 
