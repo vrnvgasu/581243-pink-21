@@ -48,3 +48,21 @@
     background-repeat: repeat;
   }
 }
+
+.background--main-image--catalog {
+  @media (max-width: $mobile-width-only) {
+    background-position: 50% 48%;
+    background-size: 830px auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-size: 1280px auto;
+    background-position: 50% 67%;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 227%;
+    background-position: 50% 62%;
+    background-repeat: repeat;
+  }
+}

@@ -8,11 +8,12 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 57px;
-    padding-bottom: 57px;
+    padding-bottom: 52px;
     display: grid;
     grid-template-columns: 300px 275px;
     grid-template-rows: 1fr 1fr;
     column-gap: 45px;
+    margin-bottom: 7px;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,6 +21,8 @@
     padding-right: 60px;
     grid-template-columns: 300px 410px;
     column-gap: 90px;
+    padding-bottom: 55px;
+    margin-bottom: 36px;
   }
 }
 
@@ -34,12 +37,23 @@
 .upload-form__send {
   @include flex-column-align-center;
 
-  justify-content: center;
+  justify-content: space-between;
   height: 201px;
+  padding-top: 38px;
+  padding-bottom: 41px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 2px;
+    padding-right: 11px;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 0;
   }
 
   .upload-form__send--button {
@@ -62,6 +76,7 @@
   @media (min-width: $tablet-width) {
     width: 300px;
     height: 400px;
+    margin-top: -2px;
   }
 }
 

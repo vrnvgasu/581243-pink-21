@@ -57,7 +57,9 @@
 
   a {
     color: $white;
+    outline: none;
 
+    &:focus,
     &:hover {
       color: $accent;
     }
@@ -119,6 +121,18 @@
 }
 
 .main-nav__toggle {
+  &:focus .main-nav__toggle--focus::before,
+  &:focus .main-nav__toggle--focus::after,
+  &:focus .main-nav__toggle--hamburger-focus {
+    background-color: $accent;
+  }
+
+  &:active .main-nav__toggle--focus::before,
+  &:active .main-nav__toggle--focus::after,
+  &:active .main-nav__toggle--hamburger-focus {
+    background-color: $accent-dark;
+  }
+
   @media (min-width: $desktop-width) {
     display: none;
   }

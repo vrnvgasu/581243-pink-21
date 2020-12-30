@@ -1,12 +1,12 @@
 .catalog-lead {
   @include flex-column-align-center;
 
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: $main;
-  min-height: 421px;
+  min-height: 420px;
 
   @media (min-width: $tablet-width) {
-    min-height: 668px;
+    min-height: 667px;
   }
 
   @media (min-width: $desktop-width) {
@@ -16,16 +16,23 @@
 
 .catalog-lead__header {
   @include margin-padding-reset;
+  @include container;
 
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   text-align: center;
   color: $white;
+  margin-top: 94px;
 
   @media (min-width: $tablet-width) {
     font-size: 50px;
     line-height: 68px;
+    margin-top: 175px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 170px;
   }
 }
 
@@ -51,8 +58,15 @@
 
   line-height: 30px;
   text-align: center;
+  padding-bottom: 7px;
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
+    padding-bottom: 0;
+    padding-top: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 2px;
   }
 }

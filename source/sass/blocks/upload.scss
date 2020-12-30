@@ -1,4 +1,6 @@
 .upload {
+  margin-bottom: 6px;
+
   @media (min-width: $desktop-width) {
     @include container;
   }
@@ -6,9 +8,18 @@
 
 .upload__lead {
   @include flex-column-align-center;
-  justify-content: center;
 
+  justify-content: center;
   min-height: 172px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 194px;
+    padding-bottom: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 185px;
+  }
 }
 
 .upload__text {
@@ -37,10 +48,12 @@
     @include container;
 
     width: 280px;
+    padding-bottom: 33px;
   }
 
   @media (min-width: $tablet-width) {
     flex-direction: column;
+    margin-top: -74px;
   }
 }
 
@@ -48,11 +61,49 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  outline: none;
+
+  @media (max-width: $mobile-width-only) {
+    &:first-child {
+      margin-left: 17px;
+    }
+
+    &:last-child {
+      margin-right: 29px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    &:not(:last-child) {
-      border-bottom: 1px solid $grey-darken;
+    border-bottom: 1px solid $grey-darken;
+    min-height: 73px;
+    width: 275px;
+    justify-content: space-between;
+    padding-right: 18px;
+    box-sizing: border-box;
+    position: relative;
+    padding-top: 2px;
+
+    &:last-child {
+      min-height: 70px;
+      padding-top: 0;
+      padding-bottom: 1px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 410px;
+    padding-right: 30px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &:hover path,
+  &:focus path {
+    @media (max-width: $mobile-width-only) {
+      fill: $main;
+      opacity: 0.5;
     }
   }
 }
@@ -70,8 +121,30 @@
     transform: scale(0.5);
   }
 
-  &:hover path,
-  &:focus path {
-    fill: $accent;
+  &--crop {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      margin-left: -7px;
+    }
+  }
+
+  &--fill {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      margin-left: -9px;
+      margin-top: 2px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &--contrast {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
+      margin-left: -1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 6px;
+    }
   }
 }
