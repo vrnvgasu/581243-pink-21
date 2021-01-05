@@ -5,6 +5,7 @@
   background-color: $background-grey;
   padding-top: 20px;
   box-sizing: border-box;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding-top: 57px;
@@ -23,6 +24,7 @@
     column-gap: 90px;
     padding-bottom: 55px;
     margin-bottom: 36px;
+    max-width: 940px;
   }
 }
 
