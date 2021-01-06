@@ -60,9 +60,13 @@
       <section class="post post--main">
         <h2 class="visually-hidden">Пост дня</h2>
         <figure class="post__figure post--main">
-          <a class="post__preview" href="">
+          <a class="post__preview post__preview--main" href="">
             <span class="main-label">Панорама дня</span>
-            <img src="img/photos/panorama-desktop.jpg" width="320" height="137" alt="Панорама дня">
+            <picture>
+              <source media="(min-width: 940px)" srcset="img/photos/panorama-desktop.jpg 1x, img/photos/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 620px)" srcset="img/photos/panorama-tablet.jpg 1x, img/photos/panorama-tablet@2x.jpg 2x">
+              <img class="post__img post__img--main" src="img/photos/panorama-mobile.jpg" srcset="img/photos/panorama-mobile@2x.jpg 2x" width="320" height="137" alt="Панорама дня">
+            </picture>
           </a>
           <figcaption class="container">
             <blockquote class="post__comment">
@@ -89,7 +93,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-1-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-1-desktop.jpg 1x, img/photos/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-1-tablet.jpg 1x, img/photos/photo-1-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-1-mobile.jpg" srcset="img/photos/photo-1-mobile@2x.jpg 2x" width="280" height="180" alt="Автомобиль в профиль">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -113,7 +121,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-2-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-2-desktop.jpg 1x, img/photos/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-2-tablet.jpg 1x, img/photos/photo-2-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-2-mobile.jpg" srcset="img/photos/photo-2-mobile@2x.jpg 2x" width="280" height="180" alt="Барабанная установка">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -137,7 +149,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-3-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-3-desktop.jpg 1x, img/photos/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-3-tablet.jpg 1x, img/photos/photo-3-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-3-mobile.jpg" srcset="img/photos/photo-3-mobile@2x.jpg 2x" width="280" height="180" alt="Вид на высотки через прозрачную крышу">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -161,7 +177,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-4-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-4-desktop.jpg 1x, img/photos/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-4-tablet.jpg 1x, img/photos/photo-4-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-4-mobile.jpg" srcset="img/photos/photo-4-mobile@2x.jpg 2x" width="280" height="180" alt="Ярмарка">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -185,7 +205,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-5-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-5-desktop.jpg 1x, img/photos/photo-5-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-5-tablet.jpg 1x, img/photos/photo-5-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-5-mobile.jpg" srcset="img/photos/photo-5-mobile@2x.jpg 2x" width="280" height="180" alt="Привал в горах">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -209,7 +233,11 @@
           <li class="post__item">
             <figure class="post__figure">
               <a class="post__preview" href="">
-                <img src="img/photos/photo-6-desktop.jpg" width="280" height="180" alt="Панорама дня">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photos/photo-6-desktop.jpg 1x, img/photos/photo-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photos/photo-6-tablet.jpg 1x, img/photos/photo-6-tablet@2x.jpg 2x">
+                  <img class="post__img" src="img/photos/photo-6-mobile.jpg" srcset="img/photos/photo-6-mobile@2x.jpg 2x" width="280"  height="180" alt="Крыло летящего самолета">
+                </picture>
               </a>
               <figcaption>
                 <blockquote class="post__comment">
@@ -243,7 +271,13 @@
           </p>
         </div>
         <form class="upload-form" action="https://echo.htmlacademy.ru" method="POST">
-          <img class="upload-form__preview" src="img/photos/photo-7-desktop.jpg" width="280" height="374" alt="Превью поста">
+          <div class="upload-form__preview">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photos/photo-7-desktop.jpg 1x, img/photos/photo-7-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photos/photo-7-tablet.jpg 1x, img/photos/photo-7-tablet@2x.jpg 2x">
+              <img class="upload-form__preview" src="img/photos/photo-7-mobile.jpg" srcset="img/photos/photo-7-mobile@2x.jpg 2x" width="280" height="374" alt="Превью поста">
+            </picture>
+          </div>
           <div class="upload-form__item">
             <label class="form__label visually-hidden">Добавить фотографию</label>
             <input class="form__input form__input--file visually-hidden" id="form-file" name="form-file" type="file" required>
