@@ -12,7 +12,7 @@
 
   @media (min-width: $tablet-width) {
     width: 300px;
-    height: 351px;
+    height: 350px;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
@@ -36,7 +36,7 @@
   font-size: 18px;
   line-height: 18px;
   margin-top: 28px;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 
   &:hover {
     background-color: $white;
@@ -105,7 +105,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 18px;
-    margin-bottom: 115px;
+    margin-bottom: 114px;
   }
 
   @media (min-width: $desktop-width) {

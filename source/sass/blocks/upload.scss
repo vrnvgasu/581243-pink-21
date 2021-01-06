@@ -1,9 +1,5 @@
 .upload {
   margin-bottom: 6px;
-
-  @media (min-width: $desktop-width) {
-    @include container;
-  }
 }
 
 .upload__lead {
