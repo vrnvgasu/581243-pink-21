@@ -95,10 +95,14 @@
     }
   }
 
-  &:hover path,
-  &:focus path {
+  &--active .upload__icon {
+    color: $accent;
+  }
+
+  &:hover:not(.upload__item--active) .upload__icon,
+  &:focus:not(.upload__item--active) .upload__icon {
     @media (max-width: $mobile-width-only) {
-      fill: $main;
+      color: $main;
       opacity: 0.5;
     }
   }
@@ -106,11 +110,10 @@
 
 .upload__icon {
   cursor: pointer;
+  color: $accent;
 
   @media (max-width: $mobile-width-only) {
-    path {
-      fill: $grey-dark;
-    }
+    color: $grey-dark;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
