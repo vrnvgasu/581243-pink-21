@@ -2,16 +2,37 @@
   display: none;
 
   &--header {
-    &:hover path {
-      fill: $accent;
+    .logo--desktop-i,
+    .logo--desktop-stars {
+      color: $accent;
     }
 
-    &:active path {
-      fill: $grey-light;
+    &:hover,
+    &:focus {
+      .logo--desktop-i,
+      .logo--desktop-stars {
+        color: $accent;
+      }
+    }
+
+    &:active {
+      .logo--desktop-i,
+      .logo--desktop-stars {
+        color: $grey-light;
+      }
     }
   }
 
   &--footer {
+    .logo--tablet-glasses,
+    .logo--desktop-glasses {
+      color: $accent;
+    }
+
+    .logo--desktop-i {
+      color: $accent;
+    }
+
     &:hover path {
       fill: $accent;
     }
