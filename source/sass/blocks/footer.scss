@@ -16,6 +16,8 @@
 }
 
 .footer__logo {
+  color: $main;
+
   @media (max-width: $mobile-width-only) {
     margin-top: 49px;
   }
