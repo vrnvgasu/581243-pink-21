@@ -13,6 +13,7 @@ let submitMainElement = document.querySelector(`.form--main .button--success`);
 let popupSuccessElement = document.querySelector(`.popup-success`);
 let popupErrorElement = document.querySelector(`.popup-error`);
 let popupButtonSuccessElement = document.querySelector(`.popup__button.button--success`);
+let mainNavToggleElement = document.querySelector(`.main-nav__toggle`);
 
 let closeMenu = () => {
   menuToggleElement.classList.remove(NAV_TOGGLE_CLOSE_CLASS);
@@ -28,6 +29,7 @@ let openMenu = () => {
 
 let menuToggleElementOnClick = (evt) => {
   evt.preventDefault();
+  mainNavToggleElement.blur();
 
   if (evt.target.classList.contains(NAV_TOGGLE_CLOSE_CLASS)) {
     closeMenu();
@@ -55,6 +57,14 @@ let popupButtonSuccessElementOnClick = (evt) => {
 };
 
 menuToggleElement.addEventListener(`click`, menuToggleElementOnClick);
+mainNavToggleElement.addEventListener(`click`, (evt) => evt.preventDefault());
+mainNavToggleElement.addEventListener(`keydown`, (evt) => {
+  evt.preventDefault();
+
+  if (evt.keyCode === 13) {
+    menuToggleElement.click();
+  }
+});
 if (formMainElement) {
   submitMainElement.addEventListener(`click`, submitMainElementOnClick);
   popupButtonSuccessElement.addEventListener(`click`, popupButtonSuccessElementOnClick);

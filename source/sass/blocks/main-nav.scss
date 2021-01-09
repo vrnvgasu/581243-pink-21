@@ -133,6 +133,9 @@
 }
 
 .main-nav__toggle {
+  &:hover .main-nav__toggle--focus::before,
+  &:hover .main-nav__toggle--focus::after,
+  &:hover .main-nav__toggle--hamburger-focus,
   &:focus .main-nav__toggle--focus::before,
   &:focus .main-nav__toggle--focus::after,
   &:focus .main-nav__toggle--hamburger-focus {
