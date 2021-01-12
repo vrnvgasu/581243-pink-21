@@ -83,6 +83,7 @@
   @media (min-width: $desktop-width) {
     margin-top: 49px;
     margin-bottom: auto;
+    padding-bottom: 50px;
   }
 }
 
@@ -111,10 +112,9 @@
 
 .reviews__toggles {
   margin-top: 0;
-  margin-bottom: auto;
+  margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 55px;
     padding-right: 3px;
   }
 
