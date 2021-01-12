@@ -87,6 +87,7 @@
   @include list-reset;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 
@@ -101,9 +102,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row;
     margin-top: 207px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 350px;
+    column-gap: 20px;
   }
 }
 

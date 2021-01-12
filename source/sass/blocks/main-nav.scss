@@ -15,6 +15,10 @@
     padding: 0 130px;
     font-weight: normal;
     line-height: 18px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
@@ -33,6 +37,18 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  &--close {
+    @media (max-width: $tablet-width-max) {
+      .main-nav__item:not(.main-nav__work-panel) {
+        display: none;
+      }
+
+      .main-nav__work-panel {
+        background-color: transparent;
+      }
+    }
   }
 }
 
@@ -121,6 +137,9 @@
 }
 
 .main-nav__toggle {
+  &:hover .main-nav__toggle--focus::before,
+  &:hover .main-nav__toggle--focus::after,
+  &:hover .main-nav__toggle--hamburger-focus,
   &:focus .main-nav__toggle--focus::before,
   &:focus .main-nav__toggle--focus::after,
   &:focus .main-nav__toggle--hamburger-focus {
