@@ -101,20 +101,14 @@
 
   &:hover:not(.upload__item--active) .upload__icon,
   &:focus:not(.upload__item--active) .upload__icon {
-    @media (max-width: $mobile-width-only) {
-      color: $main;
-      opacity: 0.5;
-    }
+    color: $main;
+    opacity: 0.5;
   }
 }
 
 .upload__icon {
   cursor: pointer;
-  color: $accent;
-
-  @media (max-width: $mobile-width-only) {
-    color: $grey-dark;
-  }
+  color: $grey-dark;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
     transform: scale(0.5);
