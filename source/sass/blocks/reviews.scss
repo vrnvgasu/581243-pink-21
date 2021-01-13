@@ -140,15 +140,16 @@
   border: none;
   outline: none;
   cursor: pointer;
+  color: $grey-dark;
 
-  &:hover path,
-  &:focus path {
-    fill: $main;
+  &:hover,
+  &:focus {
+    color: $main;
     opacity: 0.6;
   }
 
-  &:active path {
-    fill: $main;
+  &:active {
+    color: $main;
     opacity: 0.1;
   }
 }

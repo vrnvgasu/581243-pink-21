@@ -1,11 +1,19 @@
-.copyright {
+.copyright__link {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 
   @media (max-width: $mobile-width-only) {
     margin-top: auto;
-    margin-bottom: 42px;
+    margin-bottom: 47px;
+  }
+
+  &:hover .copyright__logo {
+    color: $main;
+  }
+
+  &:active .copyright__logo {
+    color: $grey-dark;
   }
 }
 
@@ -13,6 +21,7 @@
   @include margin-padding-reset;
 
   line-height: 18px;
+  color: $main;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 15px;
@@ -26,14 +35,7 @@
 
 .copyright__logo {
   margin-left: 16px;
-
-  &:hover path {
-    fill: $main;
-  }
-
-  &:active path {
-    opacity: 0.3;
-  }
+  color: $accent;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 5px;
