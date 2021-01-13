@@ -106,7 +106,7 @@
     margin-top: 0;
   }
 
-  &--set {
+  &-set {
     margin-left: 19px;
 
     @media (min-width: $tablet-width) {
@@ -150,6 +150,12 @@
 .post__figure {
   @include margin-padding-reset;
   @include flex-column-align-center;
+
+  &--main {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 25px;
+    }
+  }
 
   a {
     position: relative;
@@ -222,7 +228,7 @@
       padding-top: 2px;
     }
 
-    &--set {
+    &-set {
       margin-right: 16px;
     }
   }

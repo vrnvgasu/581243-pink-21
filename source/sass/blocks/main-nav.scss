@@ -137,18 +137,18 @@
 }
 
 .main-nav__toggle {
-  &:hover .main-nav__toggle--focus::before,
-  &:hover .main-nav__toggle--focus::after,
-  &:hover .main-nav__toggle--hamburger-focus,
-  &:focus .main-nav__toggle--focus::before,
-  &:focus .main-nav__toggle--focus::after,
-  &:focus .main-nav__toggle--hamburger-focus {
+  &:hover .main-nav__toggle-focus::before,
+  &:hover .main-nav__toggle-focus::after,
+  &:hover .main-nav__toggle-hamburger-focus,
+  &:focus .main-nav__toggle-focus::before,
+  &:focus .main-nav__toggle-focus::after,
+  &:focus .main-nav__toggle-hamburger-focus {
     background-color: $accent;
   }
 
-  &:active .main-nav__toggle--focus::before,
-  &:active .main-nav__toggle--focus::after,
-  &:active .main-nav__toggle--hamburger-focus {
+  &:active .main-nav__toggle-focus::before,
+  &:active .main-nav__toggle-focus::after,
+  &:active .main-nav__toggle-hamburger-focus {
     background-color: $accent-dark;
   }
 

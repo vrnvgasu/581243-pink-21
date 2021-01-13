@@ -24,23 +24,23 @@ a {
 }
 
 .visual {
-  &--hidden {
+  &-hidden {
     display: none;
   }
 
-  &--mobile {
+  &-mobile {
     @media (max-width: $mobile-width-only) {
       display: inline-block;
     }
   }
 
-  &--tablet {
+  &-tablet {
     @media (min-width: $tablet-width) and (max-width: $tablet-width-max) {
       display: inline-block;
     }
   }
 
-  &--desktop {
+  &-desktop {
     @media (min-width: $desktop-width) {
       display: inline-block;
     }

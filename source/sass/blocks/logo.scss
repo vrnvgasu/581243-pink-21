@@ -2,34 +2,34 @@
   display: none;
 
   &--header {
-    .logo--desktop-i,
-    .logo--desktop-stars {
+    .logo__desktop-i,
+    .logo__desktop-stars {
       color: $accent;
     }
 
     &:hover,
     &:focus {
-      .logo--desktop-i,
-      .logo--desktop-stars {
+      .logo__desktop-i,
+      .logo__desktop-stars {
         color: $accent;
       }
     }
 
     &:active {
-      .logo--desktop-i,
-      .logo--desktop-stars {
+      .logo__desktop-i,
+      .logo__desktop-stars {
         color: $grey-light;
       }
     }
   }
 
   &--footer {
-    .logo--tablet-glasses,
-    .logo--desktop-glasses {
+    .logo__tablet-glasses,
+    .logo__desktop-glasses {
       color: $accent;
     }
 
-    .logo--desktop-i {
+    .logo__desktop-i {
       color: $accent;
     }
 
